@@ -1,9 +1,12 @@
 @import "mixins";
 
-//breakpoints i boopstrap
-
-//mobile = 576px (sm) (no mixins)
-
-//tablet = 768px (md) (tablet mixins)
-
-//laptop = 992px (lg) (desktop mixins)
+//extend title for an item
+.box-title {
+	@extend .item-title;
+}
+.button {
+	@extend .button-basic;
+}
+.box-desc {
+	@extend .item-desc;
+}
