@@ -130,6 +130,10 @@ img {
   justify-content: center;
   color: white; }
 
+.checkout-wrapper {
+  display: flex;
+  justify-content: flex-end; }
+
 .bs-container {
   background: white;
   width: 100%;

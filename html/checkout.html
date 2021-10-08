@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="../css/main.css" />
     <title>grupparbete1</title>
   </head>
@@ -11,7 +17,58 @@
     <div class="greenbackground"></div>
     <header class="checkout-title"><h1>CHECKOUT</h1></header>
     <div class="checkout-wrapper">
-      <div class="bs-container"></div>
+        <div class="allergies-btn"></div>
+        Allergies?
+          <button>CLICK HERE</button>
+        </div>
+      <div class="bs-container">
+        <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label"
+              ><b>First Name:</b></label
+            >
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+            />
+            <div id="emailHelp" class="form-text"></div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label"><b>Last Name:</b></label>
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+            />
+            <div id="emailHelp" class="form-text"></div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label"><b>E-mail:</b></label>
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+            />
+            <div id="emailHelp" class="form-text"></div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label"></label>
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+            />
+            <div id="emailHelp" class="form-text"></div>
+          </div>
+          <div class="mb-3 form-check">
+          <button type="submit" class="btn btn-dark">Confirm Order</button>
+        </form>
+      </div>
     </div>
   </body>
 </html>
