@@ -130,9 +130,8 @@ img {
   justify-content: center;
   color: white; }
 
-.checkout-wrapper {
-  display: flex;
-  justify-content: flex-end; }
+form {
+  width: 75%; }
 
 .bs-container {
   background: white;
@@ -140,7 +139,14 @@ img {
   height: 500px;
   border-top-left-radius: 100px;
   border-bottom-right-radius: 100px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6) inset; }
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6) inset;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center; }
+
+#request {
+  resize: none; }
 
 footer {
   color: white;
