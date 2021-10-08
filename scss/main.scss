@@ -10,3 +10,74 @@
 .box-desc {
 	@extend .item-desc;
 }
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+.tack-container {
+	background-color: $light-green;
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	.dark-green {
+		background-color: $dark-green;
+		width: 100vw;
+		height: 80vh;
+		border-radius: 0px 150px 150px 0px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		.thank-order {
+			width: 70%;
+			height: 15%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			.order {
+				color: $yellow;
+			}
+		}
+		.light-container {
+			background-color: $white;
+			height: 80%;
+			width: 100%;
+			box-shadow: inset 0px 4px 40px rgba(128, 145, 122, 0.75);
+			border-radius: 150px 150px 150px 0px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			padding: 10px;
+			.thank-wrapper {
+				font-family: Roboto;
+				font-style: normal;
+				font-weight: normal;
+				font-size: 20px;
+				line-height: 56px;
+				h1 {
+					color: $black;
+				}
+				p {
+					color: $yellow;
+				}
+			}
+		}
+		.thank-receipt {
+			width: 70%;
+			height: 25%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			p {
+				@extend .button-basic;
+				width: 60%;
+				max-width: 200px;
+			}
+		}
+	}
+}
