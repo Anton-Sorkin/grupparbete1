@@ -5,20 +5,18 @@ html {
 }
 
 body {
-  width: 100vw;
   font-family: "PT Mono", monospace;
   background-color: #80917a;
   margin: 0;
-  position: relative;
-  .greenbackground {
-    background-color: #677662;
-    height: 100%;
-    width: 150px;
-    border-top-right-radius: 100px;
-    border-bottom-right-radius: 100px;
-    position: absolute;
-    z-index: -1;
-  }
+}
+.greenbackground {
+  background-color: #677662;
+  height: 100%;
+  width: 150px;
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+  position: absolute;
+  z-index: -1;
 }
 .cart-header {
   color: white;
@@ -83,6 +81,19 @@ img {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
   }
+}
+.checkout-title {
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+.bs-container {
+  background: white;
+  width: 100%;
+  height: 500px;
+  border-top-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6) inset;
 }
 //extend title for an item
 .box-title {
