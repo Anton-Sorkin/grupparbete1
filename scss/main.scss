@@ -16,6 +16,7 @@ body {
 	margin: 0px;
 	padding: 0px;
 	font-size: 15pt;
+	scroll-behavior: smooth;
 }
 //END OF ALL STYLING----------------------------
 
@@ -58,7 +59,7 @@ body {
 		section {
 			background-color: #bb9d6f80;
 			width: 80%;
-			min-width: 250px;
+			min-width: 270px;
 			max-width: 400px;
 			border-radius: 10px;
 			display: flex;
@@ -97,11 +98,7 @@ body {
 //END OF CART-----------------------------
 
 //HERO SECTION --------------------------------------------------
-.hero-wrapper {
-	width: 100%;
-	height: 90vh;
-	background-color: aqua;
-}
+
 //SLUT PÅ HERO SECTION --------------------------------------------------
 
 //TACK SIDA --------------------------------------------------
@@ -173,3 +170,131 @@ body {
 }
 
 //SLUT PÅ TACK SIDA --------------------------------------------------
+
+.btn-dark {
+	border-color: #000;
+	background-color: #000;
+}
+
+.nav-wrapper {
+	.navbar-brand {
+		color: #000;
+		font-size: 14px;
+	}
+}
+
+.d-flex {
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+	position: sticky;
+	top: 0px;
+
+	.cart-btn {
+		a {
+			color: #fff;
+		}
+	}
+
+	.dropdown {
+		background: rgba(255, 255, 255, 0.8);
+		padding-right: 10px;
+		list-style-type: none;
+		text-align: center;
+		visibility: hidden;
+		display: none;
+
+		li {
+			padding: 10px;
+		}
+
+		a {
+			padding: 1px;
+			display: block;
+			color: #000;
+			text-decoration: none;
+		}
+	}
+
+	.hamburger-btn {
+		background-color: #000;
+		border-radius: 4px;
+		width: 42px;
+		height: 38px;
+
+		.hamburger {
+			display: flex;
+			flex-flow: column wrap;
+			justify-content: flex-end;
+			align-items: flex-end;
+			cursor: pointer;
+			padding: 7px;
+
+			.bar1,
+			.bar2,
+			.bar3 {
+				width: 30px;
+				height: 4px;
+				background-color: #fff;
+				margin: 2px 0;
+				border-radius: 10px;
+
+				-webkit-transition: all 0.2s ease-in-out;
+				transition: all 0.2s ease-in-out;
+			}
+		}
+	}
+
+	#toggle {
+		display: none;
+	}
+
+	#toggle:checked + .hamburger .bar1 {
+		-webkit-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+		margin-top: 10px;
+	}
+
+	#toggle:checked + .hamburger .bar2 {
+		-webkit-transform: rotate(45deg);
+		transform: rotate(45deg);
+		margin-top: -6px;
+	}
+
+	#toggle:checked + .hamburger .bar3 {
+		-webkit-transform: scale(0);
+		transform: scale(0);
+	}
+
+	#toggle:checked ~ .dropdown {
+		visibility: visible;
+		display: block;
+		position: absolute;
+		width: 100%;
+		left: 0px;
+	}
+}
+.hero-wrapper {
+	height: 110vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: $white;
+	box-shadow: inset 0px 4px 40px rgba(128, 145, 122, 0.75);
+	border-radius: 75px;
+	.hero-title {
+		height: 200px;
+		width: 90%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		p {
+			color: $yellow;
+		}
+	}
+}
+.carousel-inner {
+	border-radius: 15px;
+}
