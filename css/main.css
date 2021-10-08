@@ -48,8 +48,10 @@
   justify-content: center;
   text-align: center; }
 
+html {
+  height: 100%; }
+
 body {
-  height: 100%;
   width: 100vw;
   font-family: "PT Mono", monospace;
   background-color: #80917a;
@@ -90,8 +92,7 @@ body {
       display: flex;
       flex-direction: row;
       margin-left: 50px;
-      padding-right: 50px;
-      width: 75%; }
+      padding-right: 50px; }
       .cart-title .items section .text {
         display: inline;
         flex-direction: column; }
