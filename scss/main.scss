@@ -12,14 +12,14 @@ html {
 
 body {
   font-family: "PT Mono", monospace;
-  background-color: #80917a;
+  background-color: $light-green;
   margin: 0px;
   padding: 0px;
   font-size: 15pt;
   scroll-behavior: smooth;
 }
 .greenbackground {
-  background-color: #677662;
+  background-color: $dark-green;
   height: 100%;
   width: 150px;
   border-top-right-radius: 100px;
@@ -37,7 +37,7 @@ body {
   width: 100vw;
 }
 .cart-header {
-  color: white;
+  color: $white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,7 +46,7 @@ body {
   width: 100%;
   height: 30%;
   .items {
-    background: white;
+    background: $white;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -59,7 +59,7 @@ body {
     border-bottom-right-radius: 100px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.6) inset;
     section {
-      background-color: #bb9d6f80;
+      background-color: $light-brown;
       width: 80%;
       min-width: 270px;
       max-width: 400px;
@@ -83,7 +83,7 @@ body {
 .tocheckout {
   width: 100%;
   height: 80%;
-  background: white;
+  background: $white;
   margin: 50px 0px;
   border-top-left-radius: 100px;
   border-bottom-right-radius: 100px;
@@ -102,13 +102,13 @@ body {
 .checkout-title {
   display: flex;
   justify-content: center;
-  color: white;
+  color: $white;
 }
 form {
   width: 75%;
 }
 .bs-container {
-  background: white;
+  background: $white;
   width: 100%;
   height: 500px;
   border-top-left-radius: 100px;
@@ -123,7 +123,7 @@ form {
   resize: none;
 }
 footer {
-  color: white;
+  color: $white;
   margin-left: 30px;
 }
 //extend title for an item
@@ -445,4 +445,58 @@ body {
   .carousel-inner {
     border-radius: 15px;
   }
+}
+.f-title,
+.l-title,
+.d-title {
+  display: flex;
+  justify-content: center;
+  color: $white;
+}
+.f-wrapper,
+.l-wrapper,
+.d-wrapper {
+  background-color: $white;
+  box-shadow: inset 0px 4px 40px rgba(128, 145, 122, 0.75);
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.main-title {
+  display: flex;
+  align-self: flex-start;
+  justify-content: center;
+  margin-left: 10px;
+  background-color: $dark-brown;
+  width: 50%;
+  border-radius: 10px;
+}
+.acai-desc,
+.gröt-desc,
+.mackor-desc,
+.ris-desc,
+.fal-desc,
+.söt-desc,
+.sushi-desc,
+.pumpa-desc {
+  background-color: $light-brown;
+  width: 80%;
+  border-radius: 10px;
+}
+.acai-bowl,
+.gröt,
+.mackor,
+.rispappersrullar,
+.falafel,
+.sötpotatis,
+.sushi,
+.pumpasoppa,
+.glasnudlar {
+  height: 250px;
+  border-radius: 10px;
 }

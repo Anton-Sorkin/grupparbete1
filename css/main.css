@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .button-basic, .tocheckout button, .button, * .tack-container .dark-green .thank-receipt p {
   width: 150px;
   height: 50px;
@@ -80,7 +81,7 @@ body {
   width: 100vw; }
 
 .cart-header {
-  color: white;
+  color: #fefefe;
   display: flex;
   flex-direction: column;
   align-items: center; }
@@ -89,7 +90,7 @@ body {
   width: 100%;
   height: 30%; }
   .cart-title .items {
-    background: white;
+    background: #fefefe;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -100,7 +101,7 @@ body {
     border-bottom-right-radius: 100px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.6) inset; }
     .cart-title .items section {
-      background-color: #bb9d6f80;
+      background-color: #bb9c6f80;
       width: 80%;
       min-width: 270px;
       max-width: 400px;
@@ -120,7 +121,7 @@ body {
 .tocheckout {
   width: 100%;
   height: 80%;
-  background: white;
+  background: #fefefe;
   margin: 50px 0px;
   border-top-left-radius: 100px;
   border-bottom-right-radius: 100px;
@@ -134,13 +135,13 @@ body {
 .checkout-title {
   display: flex;
   justify-content: center;
-  color: white; }
+  color: #fefefe; }
 
 form {
   width: 75%; }
 
 .bs-container {
-  background: white;
+  background: #fefefe;
   width: 100%;
   height: 500px;
   border-top-left-radius: 100px;
@@ -155,7 +156,7 @@ form {
   resize: none; }
 
 footer {
-  color: white;
+  color: #fefefe;
   margin-left: 30px; }
 
 body {
@@ -314,3 +315,57 @@ body {
         color: #eec68a; }
   * .carousel-inner {
     border-radius: 15px; }
+
+.f-title,
+.l-title,
+.d-title {
+  display: flex;
+  justify-content: center;
+  color: #fefefe; }
+
+.f-wrapper,
+.l-wrapper,
+.d-wrapper {
+  background-color: #fefefe;
+  box-shadow: inset 0px 4px 40px rgba(128, 145, 122, 0.75);
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px; }
+
+.main-title {
+  display: flex;
+  align-self: flex-start;
+  justify-content: center;
+  margin-left: 10px;
+  background-color: #bb9c6f;
+  width: 50%;
+  border-radius: 10px; }
+
+.acai-desc,
+.gröt-desc,
+.mackor-desc,
+.ris-desc,
+.fal-desc,
+.söt-desc,
+.sushi-desc,
+.pumpa-desc {
+  background-color: #bb9c6f80;
+  width: 80%;
+  border-radius: 10px; }
+
+.acai-bowl,
+.gröt,
+.mackor,
+.rispappersrullar,
+.falafel,
+.sötpotatis,
+.sushi,
+.pumpasoppa,
+.glasnudlar {
+  height: 250px;
+  border-radius: 10px; }
