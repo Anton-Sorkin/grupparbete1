@@ -33,7 +33,11 @@ body {
 	border-bottom-right-radius: 100px;
 	position: absolute;
 	z-index: -1;
+	font-family: "PT Mono", monospace;
+	background-color: #80917a;
+	margin: 0;
 }
+
 .cart-header {
 	color: white;
 	display: flex;
@@ -181,6 +185,12 @@ body {
 		color: #000;
 		font-size: 14px;
 	}
+
+	.brand-img {
+		width: 50px;
+		height: 40px;
+		margin-right: 0px;
+	}
 }
 
 .d-flex {
@@ -189,6 +199,7 @@ body {
 	flex-wrap: wrap;
 	position: sticky;
 	top: 0px;
+	margin-bottom: 40px;
 
 	.cart-btn {
 		a {
