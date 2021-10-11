@@ -353,7 +353,8 @@ body {
 .fal-desc,
 .söt-desc,
 .sushi-desc,
-.pumpa-desc {
+.pumpa-desc,
+.glas-desc {
   background-color: #bb9c6f80;
   width: 80%;
   border-radius: 10px; }
