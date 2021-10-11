@@ -64,10 +64,6 @@ body {
   font-size: 15pt;
   scroll-behavior: smooth; }
 
-.cart-container {
-  height: 100vh;
-  width: 100vw; }
-
 .greenbackground {
   background-color: #677662;
   height: 100%;
@@ -78,6 +74,10 @@ body {
   z-index: -1;
   font-family: "PT Mono", monospace;
   margin: 0; }
+
+.cart-container {
+  height: 100vh;
+  width: 100vw; }
 
 .cart-header {
   color: white;
