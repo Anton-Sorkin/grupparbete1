@@ -1,4 +1,4 @@
-.button-basic, .tocheckout button, .tack-container .dark-green .thank-receipt p {
+.button-basic, .tocheckout button, .button, * .tack-container .dark-green .thank-receipt p {
   width: 150px;
   height: 50px;
   background: #2b2b2b;
@@ -15,7 +15,7 @@
   justify-content: center;
   text-align: center; }
 
-.item-title {
+.item-title, .box-title {
   width: 200px;
   height: 50px;
   background: #bb9c6f;
@@ -31,7 +31,7 @@
   justify-content: center;
   text-align: center; }
 
-.item-desc {
+.item-desc, .box-desc {
   width: 80%;
   height: 100px;
   padding: 10px;
@@ -59,7 +59,6 @@ html {
 body {
   font-family: "PT Mono", monospace;
   background-color: #80917a;
-<<<<<<< HEAD
   margin: 0px;
   padding: 0px;
   font-size: 15pt;
@@ -68,9 +67,6 @@ body {
 .cart-container {
   height: 100vh;
   width: 100vw; }
-=======
-  margin: 0; }
->>>>>>> 9fce7a420894c46190678e395ef959928b6a3ff3
 
 .greenbackground {
   background-color: #677662;
@@ -79,7 +75,9 @@ body {
   border-top-right-radius: 100px;
   border-bottom-right-radius: 100px;
   position: absolute;
-  z-index: -1; }
+  z-index: -1;
+  font-family: "PT Mono", monospace;
+  margin: 0; }
 
 .cart-header {
   color: white;
@@ -130,20 +128,8 @@ body {
   font-size: 30px;
   display: flex;
   flex-direction: column;
-<<<<<<< HEAD
   align-items: center;
   justify-content: center; }
-=======
-  align-items: center; }
-  .tocheckout button {
-    font-family: "PT Mono", monospace;
-    background-color: #2b2b2b;
-    color: white;
-    border: none;
-    padding: 20px;
-    font-size: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6); }
 
 .checkout-title {
   display: flex;
@@ -174,159 +160,157 @@ footer {
 
 body {
   scroll-behavior: smooth; }
->>>>>>> 9fce7a420894c46190678e395ef959928b6a3ff3
 
-.tack-container {
-  background-color: #80917a;
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-  .tack-container .dark-green {
-    background-color: #677662;
+* {
+  box-sizing: border-box; }
+  * .tack-container {
+    background-color: #80917a;
+    height: 100vh;
     width: 100vw;
-    height: 80vh;
-    border-radius: 0px 150px 150px 0px;
     display: flex;
     flex-direction: column;
-    justify-content: center; }
-    .tack-container .dark-green .thank-order {
-      width: 70%;
-      height: 15%;
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-      .tack-container .dark-green .thank-order .order {
-        color: #eec68a; }
-    .tack-container .dark-green .light-container {
-      background-color: #fefefe;
-      height: 80%;
-      width: 100%;
-      box-shadow: inset 0px 4px 40px rgba(128, 145, 122, 0.75);
-      border-radius: 150px 150px 150px 0px;
+    justify-content: center;
+    align-items: center; }
+    * .tack-container .dark-green {
+      background-color: #677662;
+      width: 100vw;
+      height: 80vh;
+      border-radius: 0px 150px 150px 0px;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 10px; }
-      .tack-container .dark-green .light-container .thank-wrapper {
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 20px;
-        line-height: 56px; }
-        .tack-container .dark-green .light-container .thank-wrapper h1 {
-          color: #2b2b2b; }
-        .tack-container .dark-green .light-container .thank-wrapper p {
+      justify-content: center; }
+      * .tack-container .dark-green .thank-order {
+        width: 70%;
+        height: 15%;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        * .tack-container .dark-green .thank-order .order {
           color: #eec68a; }
-    .tack-container .dark-green .thank-receipt {
-      width: 70%;
-      height: 25%;
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-      .tack-container .dark-green .thank-receipt p {
-        width: 60%;
-        max-width: 200px; }
-
-.btn-dark {
-  border-color: #000;
-  background-color: #000; }
-
-.nav-wrapper .navbar-brand {
-  color: #000;
-  font-size: 14px; }
-
-.nav-wrapper .brand-img {
-  width: 50px;
-  height: 40px;
-  margin-right: 0px; }
-
-.d-flex {
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  position: sticky;
-  top: 0px;
-  margin-bottom: 40px; }
-  .d-flex .cart-btn a {
-    color: #fff; }
-  .d-flex .dropdown {
-    background: rgba(255, 255, 255, 0.8);
-    padding-right: 10px;
-    list-style-type: none;
-    text-align: center;
-    visibility: hidden;
-    display: none; }
-    .d-flex .dropdown li {
-      padding: 10px; }
-    .d-flex .dropdown a {
-      padding: 1px;
+      * .tack-container .dark-green .light-container {
+        background-color: #fefefe;
+        height: 80%;
+        width: 100%;
+        box-shadow: inset 0px 4px 40px rgba(128, 145, 122, 0.75);
+        border-radius: 150px 150px 150px 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px; }
+        * .tack-container .dark-green .light-container .thank-wrapper {
+          font-family: Roboto;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 20px;
+          line-height: 56px; }
+          * .tack-container .dark-green .light-container .thank-wrapper h1 {
+            color: #2b2b2b; }
+          * .tack-container .dark-green .light-container .thank-wrapper p {
+            color: #eec68a; }
+      * .tack-container .dark-green .thank-receipt {
+        width: 70%;
+        height: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        * .tack-container .dark-green .thank-receipt p {
+          width: 60%;
+          max-width: 200px; }
+  * .btn-dark {
+    border-color: #000;
+    background-color: #000; }
+  * .nav-wrapper .navbar-brand {
+    color: #000;
+    font-size: 14px; }
+  * .nav-wrapper .navbar-brand {
+    color: #000;
+    font-size: 14px; }
+  * .nav-wrapper .brand-img {
+    width: 50px;
+    height: 40px;
+    margin-right: 0px; }
+  * .d-flex {
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0px;
+    margin-bottom: 40px; }
+    * .d-flex .cart-btn a {
+      color: #fff; }
+    * .d-flex .dropdown {
+      background: rgba(255, 255, 255, 0.8);
+      padding-right: 10px;
+      list-style-type: none;
+      text-align: center;
+      visibility: hidden;
+      display: none; }
+      * .d-flex .dropdown li {
+        padding: 10px; }
+      * .d-flex .dropdown a {
+        padding: 1px;
+        display: block;
+        color: #000;
+        text-decoration: none; }
+    * .d-flex .hamburger-btn {
+      background-color: #000;
+      border-radius: 4px;
+      width: 42px;
+      height: 38px; }
+      * .d-flex .hamburger-btn .hamburger {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: flex-end;
+        align-items: flex-end;
+        cursor: pointer;
+        padding: 7px; }
+        * .d-flex .hamburger-btn .hamburger .bar1,
+        * .d-flex .hamburger-btn .hamburger .bar2,
+        * .d-flex .hamburger-btn .hamburger .bar3 {
+          width: 30px;
+          height: 4px;
+          background-color: #fff;
+          margin: 2px 0;
+          border-radius: 10px;
+          -webkit-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out; }
+    * .d-flex #toggle {
+      display: none; }
+    * .d-flex #toggle:checked + .hamburger .bar1 {
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      margin-top: 10px; }
+    * .d-flex #toggle:checked + .hamburger .bar2 {
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+      margin-top: -6px; }
+    * .d-flex #toggle:checked + .hamburger .bar3 {
+      -webkit-transform: scale(0);
+      transform: scale(0); }
+    * .d-flex #toggle:checked ~ .dropdown {
+      visibility: visible;
       display: block;
-      color: #000;
-      text-decoration: none; }
-  .d-flex .hamburger-btn {
-    background-color: #000;
-    border-radius: 4px;
-    width: 42px;
-    height: 38px; }
-    .d-flex .hamburger-btn .hamburger {
-      display: flex;
-      flex-flow: column wrap;
-      justify-content: flex-end;
-      align-items: flex-end;
-      cursor: pointer;
-      padding: 7px; }
-      .d-flex .hamburger-btn .hamburger .bar1,
-      .d-flex .hamburger-btn .hamburger .bar2,
-      .d-flex .hamburger-btn .hamburger .bar3 {
-        width: 30px;
-        height: 4px;
-        background-color: #fff;
-        margin: 2px 0;
-        border-radius: 10px;
-        -webkit-transition: all 0.2s ease-in-out;
-        transition: all 0.2s ease-in-out; }
-  .d-flex #toggle {
-    display: none; }
-  .d-flex #toggle:checked + .hamburger .bar1 {
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    margin-top: 10px; }
-  .d-flex #toggle:checked + .hamburger .bar2 {
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-    margin-top: -6px; }
-  .d-flex #toggle:checked + .hamburger .bar3 {
-    -webkit-transform: scale(0);
-    transform: scale(0); }
-  .d-flex #toggle:checked ~ .dropdown {
-    visibility: visible;
-    display: block;
-    position: absolute;
-    width: 100%;
-    left: 0px; }
-
-.hero-wrapper {
-  height: 110vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #fefefe;
-  box-shadow: inset 0px 4px 40px rgba(128, 145, 122, 0.75);
-  border-radius: 75px; }
-  .hero-wrapper .hero-title {
-    height: 200px;
-    width: 90%;
+      position: absolute;
+      width: 100%;
+      left: 0px; }
+  * .hero-wrapper {
+    height: 110vh;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    text-align: center; }
-    .hero-wrapper .hero-title p {
-      color: #eec68a; }
-
-.carousel-inner {
-  border-radius: 15px; }
+    background-color: #fefefe;
+    box-shadow: inset 0px 4px 40px rgba(128, 145, 122, 0.75);
+    border-radius: 75px; }
+    * .hero-wrapper .hero-title {
+      height: 200px;
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center; }
+      * .hero-wrapper .hero-title p {
+        color: #eec68a; }
+  * .carousel-inner {
+    border-radius: 15px; }
