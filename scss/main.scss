@@ -164,7 +164,7 @@ body {
     align-items: center;
     text-align: center;
     p {
-      color: $yellow;
+      color: $dark-brown;
     }
   }
   .hero-check {
@@ -180,7 +180,6 @@ body {
 .carousel-inner {
   border-radius: 15px;
 }
-
 //SLUT PÅ HERO SECTION --------------------------------------------------
 
 //TACK SIDA --------------------------------------------------
@@ -207,7 +206,7 @@ body {
       justify-content: center;
       align-items: center;
       .order {
-        color: $yellow;
+        color: $dark-brown;
       }
     }
     .light-container {
@@ -231,7 +230,7 @@ body {
           color: $black;
         }
         p {
-          color: $yellow;
+          color: $dark-brown;
         }
       }
     }
@@ -295,6 +294,7 @@ body {
     text-align: center;
     visibility: hidden;
     display: none;
+    z-index: 5;
 
     li {
       padding: 10px;
@@ -368,6 +368,15 @@ body {
 }
 .carousel-inner {
   border-radius: 15px;
+}
+.modal-title {
+  color: $black;
+}
+.modal-body {
+  color: $dark-brown;
+}
+.btn-modal {
+  @extend .button-basic;
 }
 // MAIN SECTION MED FRUKOST, LUNCH OCH MIDDAG-----
 #b-start,

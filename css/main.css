@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.button-basic, .btn-payment, .btn-confirm, .button, .hero-wrapper .hero-check, .tack-container .dark-green .thank-receipt p {
+.button-basic, .btn-payment, .btn-confirm, .button, .hero-wrapper .hero-check, .tack-container .dark-green .thank-receipt p, .btn-modal {
   width: 150px;
   height: 50px;
   background: #2b2b2b;
@@ -186,7 +186,7 @@ body {
     align-items: center;
     text-align: center; }
     .hero-wrapper .hero-title p {
-      color: #eec68a; }
+      color: #bb9c6f; }
   .hero-wrapper .hero-check {
     position: absolute;
     top: 92%;
@@ -220,7 +220,7 @@ body {
       justify-content: center;
       align-items: center; }
       .tack-container .dark-green .thank-order .order {
-        color: #eec68a; }
+        color: #bb9c6f; }
     .tack-container .dark-green .light-container {
       background-color: #fefefe;
       height: 80%;
@@ -241,7 +241,7 @@ body {
         .tack-container .dark-green .light-container .thank-wrapper h1 {
           color: #2b2b2b; }
         .tack-container .dark-green .light-container .thank-wrapper p {
-          color: #eec68a; }
+          color: #bb9c6f; }
     .tack-container .dark-green .thank-receipt {
       width: 70%;
       height: 25%;
@@ -283,7 +283,8 @@ body {
     list-style-type: none;
     text-align: center;
     visibility: hidden;
-    display: none; }
+    display: none;
+    z-index: 5; }
     .d-flex .dropdown li {
       padding: 10px; }
     .d-flex .dropdown a {
@@ -335,6 +336,12 @@ body {
 
 .carousel-inner {
   border-radius: 15px; }
+
+.modal-title {
+  color: #2b2b2b; }
+
+.modal-body {
+  color: #bb9c6f; }
 
 #b-start,
 #l-start,
