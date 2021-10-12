@@ -350,6 +350,7 @@ body {
     visibility: hidden;
     list-style-type: none; }
     .d-flex .navbar-desktop a {
+      display: block;
       text-decoration: none;
       color: #2b2b2b; }
     .d-flex .navbar-desktop a:hover {
@@ -357,9 +358,11 @@ body {
     .d-flex .navbar-desktop .dropdown-desktop {
       position: relative; }
       .d-flex .navbar-desktop .dropdown-desktop .desktop-items {
+        width: 200px;
         position: absolute;
         display: none;
-        background: rgba(255, 255, 255, 0.8); }
+        background: rgba(255, 255, 255, 0.8);
+        text-align: center; }
       .d-flex .navbar-desktop .dropdown-desktop .desktop-menu {
         border: none;
         outline: none;
@@ -444,12 +447,18 @@ body {
 
 @media (min-width: 992px) {
   .d-flex {
-    justify-content: flex-start; } }
+    justify-content: flex-start;
+    z-index: 5; }
+  ul {
+    margin-bottom: 0;
+    padding-left: 0; } }
 
 .filter-box {
   position: fixed;
   display: inline-block;
-  left: 10px; }
+  left: 10px;
+  top: 140px;
+  z-index: 5; }
   .filter-box .filter-btn {
     text-decoration: underline;
     cursor: pointer; }
@@ -458,7 +467,7 @@ body {
     list-style-type: none;
     display: none;
     visibility: hidden;
-    left: -15px; }
+    left: 15px; }
     .filter-box .filter-content a {
       text-decoration: none;
       color: #2b2b2b; }

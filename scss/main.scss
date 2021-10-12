@@ -333,6 +333,7 @@ body {
 		list-style-type: none;
 
 		a {
+			display: block;
 			text-decoration: none;
 			color: $black;
 		}
@@ -346,9 +347,11 @@ body {
 
 
 			.desktop-items {
+				width: 200px;
 				position: absolute;
 				display: none;
 				background: rgba(255, 255, 255, 0.8);
+				text-align: center;
 			}
 
 			.desktop-menu {
@@ -471,6 +474,7 @@ body {
 			visibility: visible;
 			display: flex;
 			justify-content: space-evenly;
+
 		}
 
 	}
@@ -480,6 +484,12 @@ body {
 
 	.d-flex {
 		justify-content: flex-start;
+		z-index: 5;
+	}
+
+	ul {
+		margin-bottom: 0;
+		padding-left: 0;
 	}
 }
 
@@ -487,6 +497,8 @@ body {
 	position: fixed;
 	display: inline-block;
 	left: 10px;
+	top: 140px;
+	z-index: 5;
 
 	.filter-btn {
 		text-decoration: underline;
@@ -499,7 +511,7 @@ body {
 		list-style-type: none;
 		display: none;
 		visibility: hidden;
-		left: -15px;
+		left: 15px;
 
 		a {
 			text-decoration: none;
