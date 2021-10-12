@@ -258,11 +258,8 @@ body {
 
 .nav-wrapper .navbar-brand {
   color: #000;
-  font-size: 14px; }
-
-.nav-wrapper .navbar-brand {
-  color: #000;
-  font-size: 14px; }
+  font-size: 14px;
+  flex-grow: 1; }
 
 .nav-wrapper .brand-img {
   width: 50px;
@@ -272,11 +269,38 @@ body {
 .d-flex {
   justify-content: space-around;
   align-items: center;
-  flex-wrap: wrap;
-  top: 0px;
-  margin-bottom: 40px; }
-  .d-flex .cart-btn a {
+  flex-wrap: nowrap;
+  gap: 50px;
+  margin-bottom: 40px;
+  position: relative; }
+  .d-flex .cart-btn a, .d-flex .cart-btn-desktop a {
     color: #fff; }
+  .d-flex .cart-btn-desktop {
+    display: none;
+    visibility: hidden; }
+  .d-flex .navbar-desktop {
+    display: none;
+    visibility: hidden;
+    list-style-type: none; }
+    .d-flex .navbar-desktop a {
+      text-decoration: none;
+      color: #2b2b2b; }
+    .d-flex .navbar-desktop a:hover {
+      text-decoration: underline; }
+    .d-flex .navbar-desktop .dropdown-desktop {
+      position: relative; }
+      .d-flex .navbar-desktop .dropdown-desktop .desktop-items {
+        position: absolute;
+        display: none;
+        background: rgba(255, 255, 255, 0.8); }
+      .d-flex .navbar-desktop .dropdown-desktop .desktop-menu {
+        border: none;
+        outline: none;
+        background-color: inherit; }
+      .d-flex .navbar-desktop .dropdown-desktop .desktop-menu:hover {
+        text-decoration: underline; }
+    .d-flex .navbar-desktop .dropdown-desktop:hover .desktop-items {
+      display: block; }
   .d-flex .dropdown {
     background: rgba(255, 255, 255, 0.8);
     padding-right: 10px;
@@ -295,7 +319,8 @@ body {
     background-color: #000;
     border-radius: 4px;
     width: 42px;
-    height: 38px; }
+    height: 38px;
+    margin-right: 20px; }
     .d-flex .hamburger-btn .hamburger {
       display: flex;
       flex-flow: column wrap;
@@ -331,7 +356,51 @@ body {
     display: block;
     position: absolute;
     width: 100%;
-    left: 0px; }
+    left: 0px;
+    right: 0px; }
+  @media (min-width: 992px) {
+    .d-flex .navbar-brand {
+      flex-grow: 0; }
+    .d-flex .hamburger-btn, .d-flex .cart-btn {
+      display: none;
+      visibility: hidden; }
+    .d-flex .cart-btn-desktop {
+      display: block;
+      visibility: visible;
+      margin-right: 40px; }
+    .d-flex .navbar-desktop {
+      width: 70%;
+      visibility: visible;
+      display: flex;
+      justify-content: space-evenly; } }
+
+@media (min-width: 992px) {
+  .d-flex {
+    justify-content: flex-start; } }
+
+.filter-box {
+  position: fixed;
+  display: inline-block;
+  left: 10px; }
+  .filter-box .filter-btn {
+    text-decoration: underline;
+    cursor: pointer; }
+  .filter-box .filter-content {
+    position: absolute;
+    list-style-type: none;
+    display: none;
+    visibility: hidden;
+    left: -15px; }
+    .filter-box .filter-content a {
+      text-decoration: none;
+      color: #2b2b2b; }
+
+#filter-toggle {
+  display: none; }
+
+#filter-toggle:checked ~ .filter-content {
+  display: block;
+  visibility: visible; }
 
 .carousel-inner {
   border-radius: 15px; }
