@@ -1,4 +1,5 @@
-.button-basic, .button {
+@charset "UTF-8";
+.button-basic, .btn-payment, .btn-confirm, .button, .hero-wrapper .hero-check, .tack-container .dark-green .thank-receipt p {
   width: 150px;
   height: 50px;
   background: #2b2b2b;
@@ -51,90 +52,213 @@
 html {
   height: 100%; }
 
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px; }
+
 body {
-  width: 100vw;
   font-family: "PT Mono", monospace;
   background-color: #80917a;
-  margin: 0;
-  position: relative; }
-  body .greenbackground {
-    background-color: #677662;
-    height: 100%;
-    width: 150px;
-    border-top-right-radius: 100px;
-    border-bottom-right-radius: 100px;
-    position: absolute;
-    z-index: -1; }
+  margin: 0px;
+  padding: 0px;
+  font-size: 15pt;
+  scroll-behavior: smooth; }
+
+.greenbackground {
+  background-color: #677662;
+  height: 100%;
+  width: 150px;
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+  position: absolute;
+  z-index: -1;
+  font-family: "PT Mono", monospace;
+  margin: 0; }
+
+.cart-container {
+  height: 100vh;
+  width: 100vw; }
 
 .cart-header {
-  color: white;
+  color: #fefefe;
   display: flex;
   flex-direction: column;
   align-items: center; }
 
 .cart-title {
-  width: 100%; }
+  width: 100%;
+  height: 30%; }
   .cart-title .items {
-    background: white;
+    background: #fefefe;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     gap: 30px;
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding: 50px 70px;
     border-top-left-radius: 100px;
     border-bottom-right-radius: 100px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.6) inset; }
     .cart-title .items section {
-      background-color: #bb9d6f80;
+      background-color: #bb9c6f80;
+      width: 80%;
+      min-width: 270px;
+      max-width: 400px;
       border-radius: 10px;
       display: flex;
       flex-direction: row;
-      margin-left: 50px;
-      padding-right: 50px; }
+      align-items: center; }
       .cart-title .items section .text {
-        display: inline;
+        display: flex;
         flex-direction: column; }
 
-img {
+.cart-pic {
   height: 100px;
   border-radius: 10%;
-  margin-right: 30px; }
+  margin-right: 10px; }
 
 .tocheckout {
   width: 100%;
-  background: white;
-  padding-top: 70px;
-  padding-bottom: 70px;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  height: 80%;
+  background: #fefefe;
+  margin: 50px 0px;
   border-top-left-radius: 100px;
   border-bottom-right-radius: 100px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.6) inset;
   font-size: 30px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly; }
+
+.btn-payment a {
+  color: #fefefe;
+  text-decoration: none; }
+
+.checkout-wrapper {
+  display: flex;
+  justify-content: space-around;
+  gap: 1.5rem;
+  flex-direction: column; }
+
+.checkout-title {
+  display: flex;
+  justify-content: center;
+  color: #fefefe;
+  margin-top: 10px;
+  font-size: 30px; }
+
+.bs-container {
+  background: #fefefe;
+  width: 100%;
+  height: 500px;
+  border-top-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6) inset;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   align-items: center; }
-  .tocheckout button {
-    font-family: "PT Mono", monospace;
-    background-color: #2b2b2b;
-    color: white;
-    border: none;
-    padding: 20px;
-    font-size: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6); }
 
-body {
-  scroll-behavior: smooth; }
+#request {
+  resize: none; }
 
-* {
-  box-sizing: border-box; }
+.btn-confirm a {
+  color: #fff;
+  text-decoration: none; }
+
+.hero-wrapper {
+  position: relative;
+  height: 110vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fefefe;
+  box-shadow: inset 0px 4px 40px rgba(128, 145, 122, 0.75);
+  border-radius: 75px; }
+  .hero-wrapper .hero-title {
+    height: 200px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; }
+    .hero-wrapper .hero-title p {
+      color: #eec68a; }
+  .hero-wrapper .hero-check {
+    position: absolute;
+    top: 92%;
+    left: 67%; }
+  .hero-wrapper .row {
+    position: relative; }
+
+.carousel-inner {
+  border-radius: 15px; }
+
+.tack-container {
+  background-color: #80917a;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .tack-container .dark-green {
+    background-color: #677662;
+    width: 100vw;
+    height: 80vh;
+    border-radius: 0px 150px 150px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .tack-container .dark-green .thank-order {
+      width: 70%;
+      height: 15%;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .tack-container .dark-green .thank-order .order {
+        color: #eec68a; }
+    .tack-container .dark-green .light-container {
+      background-color: #fefefe;
+      height: 80%;
+      width: 100%;
+      box-shadow: inset 0px 4px 40px rgba(128, 145, 122, 0.75);
+      border-radius: 150px 150px 150px 0px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 10px; }
+      .tack-container .dark-green .light-container .thank-wrapper {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 56px; }
+        .tack-container .dark-green .light-container .thank-wrapper h1 {
+          color: #2b2b2b; }
+        .tack-container .dark-green .light-container .thank-wrapper p {
+          color: #eec68a; }
+    .tack-container .dark-green .thank-receipt {
+      width: 70%;
+      height: 25%;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .tack-container .dark-green .thank-receipt p {
+        width: 60%;
+        max-width: 200px; }
 
 .btn-dark {
   border-color: #000;
   background-color: #000; }
+
+.nav-wrapper .navbar-brand {
+  color: #000;
+  font-size: 14px; }
 
 .nav-wrapper .navbar-brand {
   color: #000;
@@ -149,7 +273,6 @@ body {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  position: sticky;
   top: 0px;
   margin-bottom: 40px; }
   .d-flex .cart-btn a {
@@ -180,7 +303,9 @@ body {
       align-items: flex-end;
       cursor: pointer;
       padding: 7px; }
-      .d-flex .hamburger-btn .hamburger .bar1, .d-flex .hamburger-btn .hamburger .bar2, .d-flex .hamburger-btn .hamburger .bar3 {
+      .d-flex .hamburger-btn .hamburger .bar1,
+      .d-flex .hamburger-btn .hamburger .bar2,
+      .d-flex .hamburger-btn .hamburger .bar3 {
         width: 30px;
         height: 4px;
         background-color: #fff;
@@ -207,3 +332,73 @@ body {
     position: absolute;
     width: 100%;
     left: 0px; }
+
+.carousel-inner {
+  border-radius: 15px; }
+
+#b-start,
+#l-start,
+#d-start {
+  display: flex;
+  justify-content: center;
+  color: #fefefe;
+  font-size: 24px; }
+
+.b-wrapper,
+.l-wrapper,
+.d-wrapper {
+  background-color: #fefefe;
+  box-shadow: inset 0px 4px 40px rgba(128, 145, 122, 0.75);
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 30px;
+  padding-top: 50px;
+  padding-bottom: 50px; }
+
+.main-title {
+  font-size: 18px;
+  display: flex;
+  align-self: flex-start;
+  justify-content: center;
+  padding: 5px;
+  margin-left: 10px;
+  background-color: #bb9c6f;
+  width: 60%;
+  border-radius: 10px; }
+
+.acai-desc,
+.gröt-desc,
+.mackor-desc,
+.ris-desc,
+.fal-desc,
+.söt-desc,
+.sushi-desc,
+.pumpa-desc,
+.glas-desc {
+  background-color: #bb9c6f80;
+  width: 80%;
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 14px; }
+
+.acai-bowl,
+.gröt,
+.mackor,
+.rispappersrullar,
+.falafel,
+.sötpotatis,
+.sushi,
+.pumpasoppa,
+.glasnudlar {
+  height: 225px;
+  border-radius: 10px; }
+
+footer {
+  height: 20%;
+  color: #fefefe;
+  margin-top: 30px;
+  margin-left: 10px;
+  font-size: 18px; }

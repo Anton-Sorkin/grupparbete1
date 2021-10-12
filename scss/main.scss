@@ -1,107 +1,266 @@
 @import "mixins";
-
+//ALL STYLING----------------------------
 html {
-  height: 100%;
-}
-
-body {
-  width: 100vw;
-  font-family: "PT Mono", monospace;
-  background-color: #80917a;
-  margin: 0;
-  position: relative;
-  .greenbackground {
-    background-color: #677662;
-    height: 100%;
-    width: 150px;
-    border-top-right-radius: 100px;
-    border-bottom-right-radius: 100px;
-    position: absolute;
-    z-index: -1;
-  }
-}
-.cart-header {
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.cart-title {
-  width: 100%;
-  .items {
-    background: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 30px;
-    padding-top: 70px;
-    padding-bottom: 70px;
-    border-top-left-radius: 100px;
-    border-bottom-right-radius: 100px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6) inset;
-    section {
-      background-color: #bb9d6f80;
-      border-radius: 10px;
-      display: flex;
-      flex-direction: row;
-      margin-left: 50px;
-      padding-right: 50px;
-      .text {
-        display: inline;
-        flex-direction: column;
-      }
-    }
-  }
-}
-img {
-  height: 100px;
-  border-radius: 10%;
-  margin-right: 30px;
-}
-.tocheckout {
-  width: 100%;
-  background: white;
-  padding-top: 70px;
-  padding-bottom: 70px;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  border-top-left-radius: 100px;
-  border-bottom-right-radius: 100px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6) inset;
-  font-size: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  button {
-    font-family: "PT Mono", monospace;
-    background-color: #2b2b2b;
-    color: white;
-    border: none;
-    padding: 20px;
-    font-size: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-  }
-}
-//extend title for an item
-.box-title {
-  @extend .item-title;
-}
-.button {
-  @extend .button-basic;
-}
-.box-desc {
-  @extend .item-desc;
-}
-
-body {
-	scroll-behavior: smooth;
+	height: 100%;
 }
 
 * {
 	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
 }
+
+body {
+	font-family: "PT Mono", monospace;
+	background-color: $light-green;
+	margin: 0px;
+	padding: 0px;
+	font-size: 15pt;
+	scroll-behavior: smooth;
+}
+.greenbackground {
+	background-color: $dark-green;
+	height: 100%;
+	width: 150px;
+	border-top-right-radius: 100px;
+	border-bottom-right-radius: 100px;
+	position: absolute;
+	z-index: -1;
+	font-family: "PT Mono", monospace;
+	margin: 0;
+}
+//END OF ALL STYLING----------------------------
+
+//START OF CART-----------------------------
+.cart-container {
+	height: 100vh;
+	width: 100vw;
+}
+.cart-header {
+	color: $white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.cart-title {
+	width: 100%;
+	height: 30%;
+	.items {
+		background: $white;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		gap: 30px;
+		// padding-top: 70px;
+		// padding-bottom: 70px;
+		padding: 50px 70px;
+		border-top-left-radius: 100px;
+		border-bottom-right-radius: 100px;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.6) inset;
+		section {
+			background-color: $light-brown;
+			width: 80%;
+			min-width: 270px;
+			max-width: 400px;
+			border-radius: 10px;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+
+			.text {
+				display: flex;
+				flex-direction: column;
+			}
+		}
+	}
+}
+.cart-pic {
+	height: 100px;
+	border-radius: 10%;
+	margin-right: 10px;
+}
+.tocheckout {
+	width: 100%;
+	height: 80%;
+	background: $white;
+	margin: 50px 0px;
+	border-top-left-radius: 100px;
+	border-bottom-right-radius: 100px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.6) inset;
+	font-size: 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+}
+.btn-payment {
+	@extend .button-basic;
+	a {
+		color: $white;
+		text-decoration: none;
+	}
+}
+//END OF CART-----------------------------
+.checkout-wrapper {
+	display: flex;
+	justify-content: space-around;
+	gap: 1.5rem;
+	flex-direction: column;
+}
+.checkout-title {
+	display: flex;
+	justify-content: center;
+	color: $white;
+	margin-top: 10px;
+	font-size: 30px;
+}
+.bs-container {
+	background: $white;
+	width: 100%;
+	height: 500px;
+	border-top-left-radius: 100px;
+	border-bottom-right-radius: 100px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.6) inset;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+#request {
+	resize: none;
+}
+.btn-confirm {
+	@extend .button-basic;
+	a {
+		color: #fff;
+		text-decoration: none;
+	}
+}
+//extend title for an item
+.box-title {
+	@extend .item-title;
+}
+.button {
+	@extend .button-basic;
+}
+.box-desc {
+	@extend .item-desc;
+}
+
+// body {
+//   scroll-behavior: smooth;
+// }
+
+// * {
+//   box-sizing: border-box;
+//HERO SECTION --------------------------------------------------
+.hero-wrapper {
+	position: relative;
+	height: 110vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: $white;
+	box-shadow: inset 0px 4px 40px rgba(128, 145, 122, 0.75);
+	border-radius: 75px;
+	.hero-title {
+		height: 200px;
+		width: 90%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		p {
+			color: $yellow;
+		}
+	}
+	.hero-check {
+		@extend .button-basic;
+		position: absolute;
+		top: 92%;
+		left: 67%;
+	}
+	.row {
+		position: relative;
+	}
+}
+.carousel-inner {
+	border-radius: 15px;
+}
+
+//SLUT PÅ HERO SECTION --------------------------------------------------
+
+//TACK SIDA --------------------------------------------------
+.tack-container {
+	background-color: $light-green;
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	.dark-green {
+		background-color: $dark-green;
+		width: 100vw;
+		height: 80vh;
+		border-radius: 0px 150px 150px 0px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		.thank-order {
+			width: 70%;
+			height: 15%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			.order {
+				color: $yellow;
+			}
+		}
+		.light-container {
+			background-color: $white;
+			height: 80%;
+			width: 100%;
+			box-shadow: inset 0px 4px 40px rgba(128, 145, 122, 0.75);
+			border-radius: 150px 150px 150px 0px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			padding: 10px;
+			.thank-wrapper {
+				font-family: Roboto;
+				font-style: normal;
+				font-weight: normal;
+				font-size: 20px;
+				line-height: 56px;
+				h1 {
+					color: $black;
+				}
+				p {
+					color: $yellow;
+				}
+			}
+		}
+		.thank-receipt {
+			width: 70%;
+			height: 25%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			p {
+				@extend .button-basic;
+				width: 60%;
+				max-width: 200px;
+			}
+		}
+	}
+}
+
+//SLUT PÅ TACK SIDA --------------------------------------------------
 
 .btn-dark {
 	border-color: #000;
@@ -109,7 +268,10 @@ body {
 }
 
 .nav-wrapper {
-	
+	.navbar-brand {
+		color: #000;
+		font-size: 14px;
+	}
 	.navbar-brand {
 		color: #000;
 		font-size: 14px;
@@ -126,7 +288,6 @@ body {
 	justify-content: space-around;
 	align-items: center;
 	flex-wrap: wrap;
-	position: sticky;
 	top: 0px;
 	margin-bottom: 40px;
 
@@ -147,7 +308,7 @@ body {
 		li {
 			padding: 10px;
 		}
-	
+
 		a {
 			padding: 1px;
 			display: block;
@@ -156,66 +317,133 @@ body {
 		}
 	}
 
-	.hamburger-btn{
-	
+	.hamburger-btn {
 		background-color: #000;
 		border-radius: 4px;
 		width: 42px;
 		height: 38px;
-		
-	
+
 		.hamburger {
-			
 			display: flex;
-			flex-flow: column wrap; 
+			flex-flow: column wrap;
 			justify-content: flex-end;
 			align-items: flex-end;
 			cursor: pointer;
 			padding: 7px;
-			
-			
-			.bar1, .bar2, .bar3 {
+
+			.bar1,
+			.bar2,
+			.bar3 {
 				width: 30px;
 				height: 4px;
 				background-color: #fff;
 				margin: 2px 0;
 				border-radius: 10px;
-				
+
 				-webkit-transition: all 0.2s ease-in-out;
 				transition: all 0.2s ease-in-out;
 			}
-			
 		}
 	}
 
 	#toggle {
 		display: none;
 	}
-	
+
 	#toggle:checked + .hamburger .bar1 {
 		-webkit-transform: rotate(-45deg);
 		transform: rotate(-45deg);
 		margin-top: 10px;
-	
 	}
-	
+
 	#toggle:checked + .hamburger .bar2 {
 		-webkit-transform: rotate(45deg);
 		transform: rotate(45deg);
 		margin-top: -6px;
 	}
-	
+
 	#toggle:checked + .hamburger .bar3 {
 		-webkit-transform: scale(0);
 		transform: scale(0);
 	}
-	
+
 	#toggle:checked ~ .dropdown {
 		visibility: visible;
 		display: block;
 		position: absolute;
 		width: 100%;
 		left: 0px;
-		
 	}
+}
+.carousel-inner {
+	border-radius: 15px;
+}
+// MAIN SECTION MED FRUKOST, LUNCH OCH MIDDAG-----
+#b-start,
+#l-start,
+#d-start {
+	display: flex;
+	justify-content: center;
+	color: $white;
+	font-size: 24px;
+}
+.b-wrapper,
+.l-wrapper,
+.d-wrapper {
+	background-color: $white;
+	box-shadow: inset 0px 4px 40px rgba(128, 145, 122, 0.75);
+	border-radius: 50px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	gap: 30px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+.main-title {
+	font-size: 18px;
+	display: flex;
+	align-self: flex-start;
+	justify-content: center;
+	padding: 5px;
+	margin-left: 10px;
+	background-color: $dark-brown;
+	width: 60%;
+	border-radius: 10px;
+}
+.acai-desc,
+.gröt-desc,
+.mackor-desc,
+.ris-desc,
+.fal-desc,
+.söt-desc,
+.sushi-desc,
+.pumpa-desc,
+.glas-desc {
+	background-color: $light-brown;
+	width: 80%;
+	border-radius: 10px;
+	padding: 5px;
+	font-size: 14px;
+}
+.acai-bowl,
+.gröt,
+.mackor,
+.rispappersrullar,
+.falafel,
+.sötpotatis,
+.sushi,
+.pumpasoppa,
+.glasnudlar {
+	height: 225px;
+	border-radius: 10px;
+}
+//FOOTER-----
+footer {
+	height: 20%;
+	color: $white;
+	margin-top: 30px;
+	margin-left: 10px;
+	font-size: 18px;
 }

@@ -4,15 +4,30 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>titel</title>
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+		<title>Startsida</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+		/>
 		<link rel="stylesheet" href="./css/main.css" />
 	</head>
+	<div class="greenbackground"></div>
 	<body>
 		<header class="nav-wrapper d-flex">
 			<a class="navbar-brand" href="#nav-wrapper">
-				<img src="../../pumpkin-icon.png" alt="Pumpkin" class="brand-img">
+				<img
+					src="./components/Logga.png"
+					alt="Pumpkin"
+					width="50"
+					height="40"
+					class="d-inline-block"
+				/>
 				Vegolicious
 			</a>
 			<div class="cart-btn">
@@ -23,12 +38,12 @@
 				</button>
 			</div>
 			<div class="hamburger-btn">
-				<input type="checkbox" id="toggle"/>
-                <label class="hamburger" for="toggle">
-                    <div class="bar1"></div>
-                    <div class="bar2"></div>
-                    <div class="bar3"></div>
-                </label>
+				<input type="checkbox" id="toggle" />
+				<label class="hamburger" for="toggle">
+					<div class="bar1"></div>
+					<div class="bar2"></div>
+					<div class="bar3"></div>
+				</label>
 				<ul class="dropdown">
 					<li><a href="#b-start">Breakfast</a></li>
 					<li><a href="#l-start">Lunch</a></li>
@@ -38,5 +53,140 @@
 				</ul>
 			</div>
 		</header>
+    <div class="hero-wrapper">
+      <div class="hero-title">
+        <h1>Weekly update</h1>
+       <p>News! We just added 3 new dishes to our collection, feel free to try them!</p>
+      </div>
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-11">
+					<div
+						id="carouselExampleIndicators"
+						class="carousel slide"
+						data-bs-ride="carousel"
+					>
+						<div class="carousel-indicators">
+							<button
+								type="button"
+								data-bs-target="#carouselExampleIndicators"
+								data-bs-slide-to="0"
+								class="active"
+								aria-current="true"
+								aria-label="Slide 1"
+							></button>
+							<button
+								type="button"
+								data-bs-target="#carouselExampleIndicators"
+								data-bs-slide-to="1"
+								aria-label="Slide 2"
+							></button>
+							<button
+								type="button"
+								data-bs-target="#carouselExampleIndicators"
+								data-bs-slide-to="2"
+								aria-label="Slide 3"
+							></button>
+						</div>
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<img
+									src="./components/Avokado-macka.jpg"
+									class="d-block w-100"
+									alt="..."
+								/>
+							</div>
+							<div class="carousel-item">
+								<img
+									src="./components/Chokladsmoothieskål.jpg"
+									class="d-block w-100"
+									alt="..."
+								/>
+							</div>
+							<div class="carousel-item">
+								<img
+									src="./components/Knäckebröd.jpg"
+									class="d-block w-100"
+									alt="..."
+								/>
+							</div>
+						</div>
+						<button
+							class="carousel-control-prev"
+							type="button"
+							data-bs-target="#carouselExampleIndicators"
+							data-bs-slide="prev"
+						>
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Previous</span>
+						</button>
+						<button
+							class="carousel-control-next"
+							type="button"
+							data-bs-target="#carouselExampleIndicators"
+							data-bs-slide="next"
+						>
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Next</span>
+						</button>
+					</div>
+				</div>
+				<div class="hero-check">Check them out!</div>
+			</div>
+
+		</div>
+  </div>
+  <div id="b-start">
+	BREAKFAST
+</div>
+<div class="b-wrapper">
+	<div class="main-title">Açaí-bowl</div>
+	<img class="acai-bowl" src="./components/Acaiskål.jpg" alt="bild på smoothieskål">
+	<div class="acai-desc">Frozen banana, berries and açaí with nutty granola, coconut and fresh fruit</div>
+	<div class="main-title">Oatmeal</div>
+	<img class="gröt" src="./components/Gröt.jpg" alt="bild på gröt"/>
+	<div class="gröt-desc">Oats cooked in coconutmilk with banana slices, walnuts, puffed quinoa and cinnamon</div> 
+	<div class="main-title">Breakfast deal</div> 
+	<img class="mackor" src="./components/Mackor.jpg" alt="bild på mackor"/>
+	<div class="mackor-desc">Coconut yogurt + glutenfree sandwiches with hummus and avocado</div>
+</div>
+  <div id="l-start">
+	  LUNCH
+  </div>
+  <div class="l-wrapper">
+	  <div class="main-title">Ricepaper rolls</div>
+	  <img class="rispappersrullar" src="./components/Rispappersrullar.jpg" alt="bild på vietnamesiska vårrullar">
+	  <div class="ris-desc">Ricepaper rolls with tofu, avocado, mango and veggies with tamari on the side</div>
+	  <div class="main-title">Falafel-bowl</div>
+	  <img class="falafel" src="./components/Falafel.jpg" alt="bild på falafel"/>
+	  <div class="fal-desc">Falafel and veggies with hummus and a tahini dressing</div> 
+	  <div class="main-title">Sweetpotato and chickpea salad</div> 
+	  <img class="sötpotatis" src="./components/Sötpotatissallad.jpg" alt="bild på sallad"/>
+	  <div class="söt-desc">Roasted sweetpotato and chickpeas in a kalesalad with a cashewnut dressing</div>
+  </div>
+  <div id="d-start">
+	DINNER
+</div>
+<div class="d-wrapper">
+	<div class="main-title">Quinoa Sushi</div>
+	<img class="sushi" src="./components/Sushi.jpg" alt="bild på sushi">
+	<div class="sushi-desc">Quinoa and veggie sushi with tofu and avocado</div>
+	<div class="main-title">Butternut squash soup</div>
+	<img class="pumpasoppa" src="./components/Pumpasoppa.jpg" alt="bild på soppa"/>
+	<div class="pumpa-desc">Butternut squash soup with fresh thyme, oat créme fraiche, roasted mustard- and pumpkin seeds</div> 
+	<div class="main-title">Glassnoodles in a basil pesto</div> 
+	<img class="glasnudlar" src="./components/Glasnudlar.jpg" alt="bild på glasnudlar"/>
+	<div class="glas-desc">Glassnoodles and mushrooms in a basil pesto with sundried tomatoes and toasted pinenuts</div>
+</div>
+  <footer id="f-wrapper">
+      <p>Contact Us</p>
+      <p><i class="bi bi-instagram"></i>Instagram</p>
+      <p>&#169Vegolicious</p>
+    </footer>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ"
+			crossorigin="anonymous"
+		></script>
 	</body>
 </html>
