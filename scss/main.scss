@@ -198,14 +198,8 @@ body {
     align-items: center;
     text-align: center;
     p {
-      color: $dark-brown;
+      color: $yellow;
     }
-  }
-  .hero-check {
-    @extend .button-basic;
-    position: absolute;
-    top: 92%;
-    left: 67%;
   }
   .row {
     position: relative;
@@ -213,6 +207,15 @@ body {
 }
 .carousel-inner {
   border-radius: 15px;
+  display: flex;
+}
+.row {
+  .hero-check {
+    @extend .button-basic;
+    position: relative;
+    bottom: 20px;
+    left: 25vw;
+  }
 }
 //SLUT PÅ HERO SECTION --------------------------------------------------
 
@@ -434,44 +437,61 @@ body {
   gap: 30px;
   padding-top: 50px;
   padding-bottom: 50px;
-}
-.main-title {
-  font-size: 18px;
-  display: flex;
-  align-self: flex-start;
-  justify-content: center;
-  padding: 5px;
-  margin-left: 10px;
-  background-color: $dark-brown;
-  width: 60%;
-  border-radius: 10px;
-}
-.acai-desc,
-.gröt-desc,
-.mackor-desc,
-.ris-desc,
-.fal-desc,
-.söt-desc,
-.sushi-desc,
-.pumpa-desc,
-.glas-desc {
-  background-color: $light-brown;
-  width: 80%;
-  border-radius: 10px;
-  padding: 5px;
-  font-size: 14px;
-}
-.acai-bowl,
-.gröt,
-.mackor,
-.rispappersrullar,
-.falafel,
-.sötpotatis,
-.sushi,
-.pumpasoppa,
-.glasnudlar {
-  height: 225px;
-  border-radius: 10px;
+
+  .main-title {
+    @extend .item-title;
+    align-self: flex-start;
+    margin-left: 50px;
+  }
+  .imgs {
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: drop-shadow(4px 10px 10px rgba(0, 0, 0, 0.25));
+    border-radius: 30px;
+    width: 250px;
+    height: 250px;
+    justify-content: center;
+    align-items: center;
+    .img1 {
+      background-image: url(../components/Glasnudlar.jpg);
+      @extend .pictures;
+    }
+    .img2 {
+      background-image: url(../components/Gröt.jpg);
+      @extend .pictures;
+    }
+    .img3 {
+      background-image: url(../components/Mackor.jpg);
+      @extend .pictures;
+    }
+    .img4 {
+      background-image: url(../components/Mackor.jpg);
+      @extend .pictures;
+    }
+    .img5 {
+      background-image: url(../components/Mackor.jpg);
+      @extend .pictures;
+    }
+    .img6 {
+      background-image: url(../components/Mackor.jpg);
+      @extend .pictures;
+    }
+    .img7 {
+      background-image: url(../components/Mackor.jpg);
+      @extend .pictures;
+    }
+    .img8 {
+      background-image: url(../components/Mackor.jpg);
+      @extend .pictures;
+    }
+    .img9 {
+      background-image: url(../components/Mackor.jpg);
+      @extend .pictures;
+    }
+  }
+  .food-desc {
+    @extend .item-desc;
+  }
 }
 //FOOTER-----
 footer {
