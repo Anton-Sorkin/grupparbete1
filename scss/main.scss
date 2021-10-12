@@ -1,271 +1,297 @@
 @import "mixins";
 //ALL STYLING----------------------------
 html {
-	height: 100%;
+  height: 100%;
 }
 
 * {
-	box-sizing: border-box;
-	margin: 0px;
-	padding: 0px;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
 }
 
 body {
-	font-family: "PT Mono", monospace;
-	background-color: $light-green;
-	margin: 0px;
-	padding: 0px;
-	font-size: 15pt;
-	scroll-behavior: smooth;
+  font-family: "PT Mono", monospace;
+  background-color: $light-green;
+  margin: 0px;
+  padding: 0px;
+  font-size: 15pt;
+  scroll-behavior: smooth;
 }
 .greenbackground {
-	background-color: $dark-green;
-	height: 100%;
-	width: 150px;
-	border-top-right-radius: 100px;
-	border-bottom-right-radius: 100px;
-	position: absolute;
-	z-index: -1;
-	font-family: "PT Mono", monospace;
-	margin: 0;
+  background-color: $dark-green;
+  height: 100%;
+  width: 150px;
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+  position: absolute;
+  z-index: -1;
+  font-family: "PT Mono", monospace;
+  margin: 0;
+  @include tablet {
+    background-color: $dark-green;
+    width: 100vw;
+    height: 80vh;
+    border-radius: 0px 150px 150px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 //END OF ALL STYLING----------------------------
 
 //START OF CART-----------------------------
 .cart-container {
-	height: 100vh;
-	width: 100vw;
-}
-.cart-header {
-	color: $white;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-.cart-title {
-	width: 100%;
-	height: 30%;
-	.items {
-		background: $white;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		align-items: center;
-		gap: 30px;
-		// padding-top: 70px;
-		// padding-bottom: 70px;
-		padding: 50px 70px;
-		border-top-left-radius: 100px;
-		border-bottom-right-radius: 100px;
-		box-shadow: 0 0 10px rgba(0, 0, 0, 0.6) inset;
-		section {
-			background-color: $light-brown;
-			width: 80%;
-			min-width: 270px;
-			max-width: 400px;
-			border-radius: 10px;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-
-			.text {
-				display: flex;
-				flex-direction: column;
-			}
-		}
-	}
+  height: 100vh;
+  width: 100vw;
+  .cart-header {
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .cart-title {
+    width: 100%;
+    height: 40%;
+    .items {
+      background: $white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+      padding: 50px 70px;
+      border-top-left-radius: 100px;
+      border-bottom-right-radius: 100px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.6) inset;
+      @include desktop {
+        flex-direction: row;
+      }
+    }
+    section {
+      background-color: $light-brown;
+      width: 80%;
+      min-width: 270px;
+      max-width: 400px;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      font-size: 16px;
+      .text {
+        display: flex;
+        flex-direction: column;
+        @include desktop {
+          justify-content: center;
+          align-self: center;
+        }
+      }
+    }
+  }
 }
 .cart-pic {
-	height: 100px;
-	border-radius: 10%;
-	margin-right: 10px;
+  height: 100px;
+  border-radius: 10%;
+  margin-right: 10px;
+  @include desktop {
+    height: 200px;
+    margin-right: 3px;
+  }
 }
 .tocheckout {
-	width: 100%;
-	height: 80%;
-	background: $white;
-	margin: 50px 0px;
-	border-top-left-radius: 100px;
-	border-bottom-right-radius: 100px;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.6) inset;
-	font-size: 30px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-evenly;
+  width: 100%;
+  height: 80%;
+  background: $white;
+  margin: 50px 0px;
+  border-top-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6) inset;
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
 }
 .btn-payment {
-	@extend .button-basic;
-	a {
-		color: $white;
-		text-decoration: none;
-	}
+  @extend .button-basic;
+  a {
+    color: $white;
+    text-decoration: none;
+  }
 }
 //END OF CART-----------------------------
 .checkout-wrapper {
-	display: flex;
-	justify-content: space-around;
-	gap: 1.5rem;
-	flex-direction: column;
+  display: flex;
+  justify-content: space-around;
+  gap: 1.5rem;
+  flex-direction: column;
+  @include tablet {
+    align-items: center;
+  }
 }
 .checkout-title {
-	display: flex;
-	justify-content: center;
-	color: $white;
-	margin-top: 10px;
-	font-size: 30px;
+  display: flex;
+  justify-content: center;
+  color: $white;
+  margin-top: 10px;
+  font-size: 30px;
 }
 .bs-container {
-	background: $white;
-	width: 100%;
-	height: 500px;
-	border-top-left-radius: 100px;
-	border-bottom-right-radius: 100px;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.6) inset;
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	align-items: center;
+  background: $white;
+  width: 100%;
+  height: 500px;
+  border-top-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6) inset;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  @include tablet {
+    width: 50%;
+    align-items: center;
+    form {
+      width: 60%;
+      .form-check {
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+  }
 }
 #request {
-	resize: none;
+  resize: none;
 }
 .btn-confirm {
-	@extend .button-basic;
-	a {
-		color: #fff;
-		text-decoration: none;
-
-	}
+  @extend .button-basic;
+  a {
+    color: $white;
+    text-decoration: none;
+  }
 }
 //extend title for an item
 .box-title {
-	@extend .item-title;
+  @extend .item-title;
 }
 .button {
-	@extend .button-basic;
+  @extend .button-basic;
 }
 .box-desc {
-	@extend .item-desc;
+  @extend .item-desc;
 }
-
-// body {
-//   scroll-behavior: smooth;
-// }
-
-// * {
-//   box-sizing: border-box;
 //HERO SECTION --------------------------------------------------
 .hero-wrapper {
-	position: relative;
-	height: 110vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	background-color: $white;
-	box-shadow: inset 0px 4px 40px rgba(128, 145, 122, 0.75);
-	border-radius: 75px;
-	.hero-title {
-		height: 200px;
-		width: 90%;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		text-align: center;
-		p {
-			color: $yellow;
-		}
-	}
-	.hero-check {
-		@extend .button-basic;
-		position: absolute;
-		top: 92%;
-		left: 67%;
-	}
-	.row {
-		position: relative;
-	}
+  position: relative;
+  height: 110vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $white;
+  box-shadow: inset 0px 4px 40px rgba(128, 145, 122, 0.75);
+  border-radius: 75px;
+  .hero-title {
+    height: 200px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    p {
+      color: $dark-brown;
+    }
+  }
+  .row {
+    position: relative;
+  }
 }
 .carousel-inner {
-	border-radius: 15px;
+  border-radius: 15px;
+  display: flex;
 }
-
+.row {
+  .hero-check {
+    @extend .button-basic;
+    position: relative;
+    bottom: 20px;
+    left: 25vw;
+  }
+}
 //SLUT PÅ HERO SECTION --------------------------------------------------
 
 //TACK SIDA --------------------------------------------------
 .tack-container {
-	background-color: $light-green;
-	height: 100vh;
-	width: 100vw;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	.dark-green {
-		background-color: $dark-green;
-		width: 100vw;
-		height: 80vh;
-		border-radius: 0px 150px 150px 0px;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		.thank-order {
-			width: 70%;
-			height: 15%;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			.order {
-				color: $yellow;
-			}
-		}
-		.light-container {
-			background-color: $white;
-			height: 80%;
-			width: 100%;
-			box-shadow: inset 0px 4px 40px rgba(128, 145, 122, 0.75);
-			border-radius: 150px 150px 150px 0px;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			padding: 10px;
-			.thank-wrapper {
-				font-family: Roboto;
-				font-style: normal;
-				font-weight: normal;
-				font-size: 20px;
-				line-height: 56px;
-				h1 {
-					color: $black;
-				}
-				p {
-					color: $yellow;
-				}
-			}
-		}
-		.thank-receipt {
-			width: 70%;
-			height: 25%;
-			display: flex;
-			justify-content: center;
-			align-items: center;
+  background-color: $light-green;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .dark-green {
+    background-color: $dark-green;
+    width: 100vw;
+    height: 80vh;
+    border-radius: 0px 150px 150px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .thank-order {
+      width: 70%;
+      height: 15%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .order {
+        color: $dark-brown;
+      }
+    }
+    .light-container {
+      background-color: $white;
+      height: 80%;
+      width: 100%;
+      box-shadow: inset 0px 4px 40px rgba(128, 145, 122, 0.75);
+      border-radius: 150px 150px 150px 0px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      .thank-wrapper {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 56px;
+        h1 {
+          color: $black;
+        }
+        p {
+          color: $dark-brown;
+        }
+      }
+    }
+    .thank-receipt {
+      width: 70%;
+      height: 25%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-			p {
-				@extend .button-basic;
-				width: 60%;
-				max-width: 200px;
-			}
-		}
-	}
+      p {
+        @extend .button-basic;
+        width: 60%;
+        max-width: 200px;
+      }
+    }
+  }
 }
 
 //SLUT PÅ TACK SIDA --------------------------------------------------
 
 .btn-dark {
-	border-color: #000;
-	background-color: #000;
+  border-color: #000;
+  background-color: #000;
 }
 
 .nav-wrapper {
@@ -275,11 +301,11 @@ body {
 		flex-grow: 1;
 	}
 
-	.brand-img {
-		width: 50px;
-		height: 40px;
-		margin-right: 0px;
-	}
+  .brand-img {
+    width: 50px;
+    height: 40px;
+    margin-right: 0px;
+  }
 }
 
 .d-flex {
@@ -342,25 +368,26 @@ body {
 		}
 	}
 
-	.dropdown {
-		background: rgba(255, 255, 255, 0.8);
-		padding-right: 10px;
-		list-style-type: none;
-		text-align: center;
-		visibility: hidden;
-		display: none;
+  .dropdown {
+    background: rgba(255, 255, 255, 0.8);
+    padding-right: 10px;
+    list-style-type: none;
+    text-align: center;
+    visibility: hidden;
+    display: none;
+    z-index: 5;
 
-		li {
-			padding: 10px;
-		}
+    li {
+      padding: 10px;
+    }
 
-		a {
-			padding: 1px;
-			display: block;
-			color: #000;
-			text-decoration: none;
-		}
-	}
+    a {
+      padding: 1px;
+      display: block;
+      color: #000;
+      text-decoration: none;
+    }
+  }
 
 	.hamburger-btn {
 		background-color: #000;
@@ -369,49 +396,49 @@ body {
 		height: 38px;
 		margin-right: 20px;
 
-		.hamburger {
-			display: flex;
-			flex-flow: column wrap;
-			justify-content: flex-end;
-			align-items: flex-end;
-			cursor: pointer;
-			padding: 7px;
+    .hamburger {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: flex-end;
+      align-items: flex-end;
+      cursor: pointer;
+      padding: 7px;
 
-			.bar1,
-			.bar2,
-			.bar3 {
-				width: 30px;
-				height: 4px;
-				background-color: #fff;
-				margin: 2px 0;
-				border-radius: 10px;
+      .bar1,
+      .bar2,
+      .bar3 {
+        width: 30px;
+        height: 4px;
+        background-color: #fff;
+        margin: 2px 0;
+        border-radius: 10px;
 
-				-webkit-transition: all 0.2s ease-in-out;
-				transition: all 0.2s ease-in-out;
-			}
-		}
-	}
+        -webkit-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+      }
+    }
+  }
 
-	#toggle {
-		display: none;
-	}
+  #toggle {
+    display: none;
+  }
 
-	#toggle:checked + .hamburger .bar1 {
-		-webkit-transform: rotate(-45deg);
-		transform: rotate(-45deg);
-		margin-top: 10px;
-	}
+  #toggle:checked + .hamburger .bar1 {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    margin-top: 10px;
+  }
 
-	#toggle:checked + .hamburger .bar2 {
-		-webkit-transform: rotate(45deg);
-		transform: rotate(45deg);
-		margin-top: -6px;
-	}
+  #toggle:checked + .hamburger .bar2 {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin-top: -6px;
+  }
 
-	#toggle:checked + .hamburger .bar3 {
-		-webkit-transform: scale(0);
-		transform: scale(0);
-	}
+  #toggle:checked + .hamburger .bar3 {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
 
 	#toggle:checked ~ .dropdown {
 		visibility: visible;
@@ -490,74 +517,100 @@ body {
 	visibility: visible;
 }
 .carousel-inner {
-	border-radius: 15px;
+  border-radius: 15px;
+}
+.modal-title {
+  color: $black;
+}
+.modal-body {
+  color: $dark-brown;
+}
+.btn-modal {
+  @extend .button-basic;
 }
 // MAIN SECTION MED FRUKOST, LUNCH OCH MIDDAG-----
 #b-start,
 #l-start,
 #d-start {
-	display: flex;
-	justify-content: center;
-	color: $white;
-	font-size: 24px;
+  display: flex;
+  justify-content: center;
+  color: $white;
+  font-size: 24px;
 }
 .b-wrapper,
 .l-wrapper,
 .d-wrapper {
-	background-color: $white;
-	box-shadow: inset 0px 4px 40px rgba(128, 145, 122, 0.75);
-	border-radius: 50px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-around;
-	gap: 30px;
-	padding-top: 50px;
-	padding-bottom: 50px;
-}
-.main-title {
-	font-size: 18px;
-	display: flex;
-	align-self: flex-start;
-	justify-content: center;
-	padding: 5px;
-	margin-left: 10px;
-	background-color: $dark-brown;
-	width: 60%;
-	border-radius: 10px;
-}
-.acai-desc,
-.gröt-desc,
-.mackor-desc,
-.ris-desc,
-.fal-desc,
-.söt-desc,
-.sushi-desc,
-.pumpa-desc,
-.glas-desc {
-	background-color: $light-brown;
-	width: 80%;
-	border-radius: 10px;
-	padding: 5px;
-	font-size: 14px;
-}
-.acai-bowl,
-.gröt,
-.mackor,
-.rispappersrullar,
-.falafel,
-.sötpotatis,
-.sushi,
-.pumpasoppa,
-.glasnudlar {
-	height: 225px;
-	border-radius: 10px;
+  background-color: $white;
+  box-shadow: inset 0px 4px 40px rgba(128, 145, 122, 0.75);
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 30px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  .main-title {
+    @extend .item-title;
+    align-self: flex-start;
+    margin-left: 50px;
+  }
+  .imgs {
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: drop-shadow(4px 10px 10px rgba(0, 0, 0, 0.25));
+    border-radius: 30px;
+    width: 250px;
+    height: 250px;
+    justify-content: center;
+    align-items: center;
+    .img1 {
+      background-image: url(../components/Glasnudlar.jpg);
+      @extend .pictures;
+    }
+    .img2 {
+      background-image: url(../components/Gröt.jpg);
+      @extend .pictures;
+    }
+    .img3 {
+      background-image: url(../components/Mackor.jpg);
+      @extend .pictures;
+    }
+    .img4 {
+      background-image: url(../components/Mackor.jpg);
+      @extend .pictures;
+    }
+    .img5 {
+      background-image: url(../components/Mackor.jpg);
+      @extend .pictures;
+    }
+    .img6 {
+      background-image: url(../components/Mackor.jpg);
+      @extend .pictures;
+    }
+    .img7 {
+      background-image: url(../components/Mackor.jpg);
+      @extend .pictures;
+    }
+    .img8 {
+      background-image: url(../components/Mackor.jpg);
+      @extend .pictures;
+    }
+    .img9 {
+      background-image: url(../components/Mackor.jpg);
+      @extend .pictures;
+    }
+  }
+  .food-desc {
+    @extend .item-desc;
+  }
 }
 //FOOTER-----
 footer {
-	height: 20%;
-	color: $white;
-	margin-top: 30px;
-	margin-left: 10px;
-	font-size: 18px;
+  height: 20%;
+  color: $white;
+  margin-top: 30px;
+  margin-left: 10px;
+  font-size: 18px;
 }
