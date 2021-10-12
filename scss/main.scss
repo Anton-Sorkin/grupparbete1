@@ -102,6 +102,40 @@ body {
 //END OF CART-----------------------------
 
 //HERO SECTION --------------------------------------------------
+.hero-wrapper {
+	position: relative;
+	height: 110vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: $white;
+	box-shadow: inset 0px 4px 40px rgba(128, 145, 122, 0.75);
+	border-radius: 75px;
+	.hero-title {
+		height: 200px;
+		width: 90%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		p {
+			color: $yellow;
+		}
+	}
+	.hero-check {
+		@extend .button-basic;
+		position: absolute;
+		top: 92%;
+		left: 67%;
+	}
+	.row {
+		position: relative;
+	}
+}
+.carousel-inner {
+	border-radius: 15px;
+}
 
 //SLUT PÅ HERO SECTION --------------------------------------------------
 
@@ -197,7 +231,7 @@ body {
 	justify-content: space-around;
 	align-items: center;
 	flex-wrap: wrap;
-	position: sticky;
+	// position: sticky;
 	top: 0px;
 	margin-bottom: 40px;
 
@@ -285,27 +319,7 @@ body {
 		left: 0px;
 	}
 }
-.hero-wrapper {
-	height: 110vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	background-color: $white;
-	box-shadow: inset 0px 4px 40px rgba(128, 145, 122, 0.75);
-	border-radius: 75px;
-	.hero-title {
-		height: 200px;
-		width: 90%;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		text-align: center;
-		p {
-			color: $yellow;
-		}
-	}
-}
+
 .carousel-inner {
 	border-radius: 15px;
 }
