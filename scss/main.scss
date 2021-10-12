@@ -295,14 +295,11 @@ body {
 }
 
 .nav-wrapper {
-  .navbar-brand {
-    color: #000;
-    font-size: 14px;
-  }
-  .navbar-brand {
-    color: #000;
-    font-size: 14px;
-  }
+	.navbar-brand {
+		color: #000;
+		font-size: 14px;
+		flex-grow: 1;
+	}
 
   .brand-img {
     width: 50px;
@@ -312,17 +309,67 @@ body {
 }
 
 .d-flex {
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  top: 0px;
-  margin-bottom: 40px;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: nowrap;
+	gap: 50px;
+	margin-bottom: 40px;
+	position: relative;
 
-  .cart-btn {
-    a {
-      color: #fff;
-    }
-  }
+	.cart-btn, .cart-btn-desktop {
+		a {
+			color: #fff;
+		}
+	}
+	
+	.cart-btn-desktop {
+		display: none;
+		visibility: hidden;
+	}
+
+	.navbar-desktop {
+		display: none;
+		visibility: hidden;
+		list-style-type: none;
+
+		a {
+			display: block;
+			text-decoration: none;
+			color: $black;
+		}
+
+		a:hover {
+			text-decoration: underline;
+		}
+
+		.dropdown-desktop {
+			position: relative;
+
+
+			.desktop-items {
+				width: 200px;
+				position: absolute;
+				display: none;
+				background: rgba(255, 255, 255, 0.8);
+				text-align: center;
+			}
+
+			.desktop-menu {
+				border: none;
+				outline: none;
+				background-color: inherit;
+
+			}
+
+			.desktop-menu:hover {
+				text-decoration: underline;
+			}
+		}
+
+		.dropdown-desktop:hover .desktop-items {
+			display: block;
+		}
+	}
 
   .dropdown {
     background: rgba(255, 255, 255, 0.8);
@@ -345,11 +392,12 @@ body {
     }
   }
 
-  .hamburger-btn {
-    background-color: #000;
-    border-radius: 4px;
-    width: 42px;
-    height: 38px;
+	.hamburger-btn {
+		background-color: #000;
+		border-radius: 4px;
+		width: 42px;
+		height: 38px;
+		margin-right: 20px;
 
     .hamburger {
       display: flex;
@@ -395,13 +443,90 @@ body {
     transform: scale(0);
   }
 
-  #toggle:checked ~ .dropdown {
-    visibility: visible;
-    display: block;
-    position: absolute;
-    width: 100%;
-    left: 0px;
-  }
+	#toggle:checked ~ .dropdown {
+		visibility: visible;
+		display: block;
+		position: absolute;
+		width: 100%;
+		left: 0px;
+		right: 0px;
+	}
+
+	@include desktop {
+
+		.navbar-brand {
+			flex-grow: 0;
+		}
+	
+		.hamburger-btn, .cart-btn {
+			display: none;
+			visibility: hidden;
+		}
+
+		.cart-btn-desktop {
+			display: block;
+			visibility: visible;
+			margin-right: 40px;
+		}
+		
+		.navbar-desktop {
+			width: 70%;
+			visibility: visible;
+			display: flex;
+			justify-content: space-evenly;
+
+		}
+
+	}
+	
+}
+@include desktop {
+
+	.d-flex {
+		justify-content: flex-start;
+		z-index: 5;
+	}
+
+	ul {
+		margin-bottom: 0;
+		padding-left: 0;
+	}
+}
+
+.filter-box {
+	position: fixed;
+	display: inline-block;
+	left: 10px;
+	top: 140px;
+	z-index: 5;
+
+	.filter-btn {
+		text-decoration: underline;
+		cursor: pointer;
+	}
+
+
+	.filter-content {
+		position: absolute;
+		list-style-type: none;
+		display: none;
+		visibility: hidden;
+		left: 15px;
+
+		a {
+			text-decoration: none;
+			color: $black;
+		}
+	}
+}
+
+#filter-toggle {
+	display: none;
+}
+
+#filter-toggle:checked ~ .filter-content {
+	display: block;
+	visibility: visible;
 }
 .carousel-inner {
   border-radius: 15px;
