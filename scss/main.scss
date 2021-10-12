@@ -44,29 +44,29 @@ body {
 .cart-container {
   height: 100vh;
   width: 100vw;
-}
-.cart-header {
-  color: $white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.cart-title {
-  width: 100%;
-  height: 40%;
-  .items {
-    background: $white;
+  .cart-header {
+    color: $white;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
-    gap: 30px;
-    padding: 50px 70px;
-    border-top-left-radius: 100px;
-    border-bottom-right-radius: 100px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6) inset;
-    @include desktop {
-      flex-direction: row;
+  }
+  .cart-title {
+    width: 100%;
+    height: 40%;
+    .items {
+      background: $white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+      padding: 50px 70px;
+      border-top-left-radius: 100px;
+      border-bottom-right-radius: 100px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.6) inset;
+      @include desktop {
+        flex-direction: row;
+      }
     }
     section {
       background-color: $light-brown;
