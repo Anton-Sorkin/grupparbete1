@@ -5,6 +5,7 @@
   background: #2b2b2b;
   box-shadow: 0px 4px 20px #2b2b2b;
   border-radius: 15px;
+  border: none;
   cursor: pointer;
   font-style: normal;
   font-weight: normal;
@@ -77,11 +78,15 @@
   height: 100%;
   position: relative; }
   .pictures .img-button, .b-wrapper .imgs .img1 .img-button, .l-wrapper .imgs .img1 .img-button, .d-wrapper .imgs .img1 .img-button, .b-wrapper .imgs .img2 .img-button, .l-wrapper .imgs .img2 .img-button, .d-wrapper .imgs .img2 .img-button, .b-wrapper .imgs .img3 .img-button, .l-wrapper .imgs .img3 .img-button, .d-wrapper .imgs .img3 .img-button, .b-wrapper .imgs .img4 .img-button, .l-wrapper .imgs .img4 .img-button, .d-wrapper .imgs .img4 .img-button, .b-wrapper .imgs .img5 .img-button, .l-wrapper .imgs .img5 .img-button, .d-wrapper .imgs .img5 .img-button, .b-wrapper .imgs .img6 .img-button, .l-wrapper .imgs .img6 .img-button, .d-wrapper .imgs .img6 .img-button, .b-wrapper .imgs .img7 .img-button, .l-wrapper .imgs .img7 .img-button, .d-wrapper .imgs .img7 .img-button, .b-wrapper .imgs .img8 .img-button, .l-wrapper .imgs .img8 .img-button, .d-wrapper .imgs .img8 .img-button, .b-wrapper .imgs .img9 .img-button, .l-wrapper .imgs .img9 .img-button, .d-wrapper .imgs .img9 .img-button {
+    border: none;
     width: 80px;
     height: 50px;
     position: absolute;
     top: 220px;
     left: 190px; }
+    .pictures .img-button a, .b-wrapper .imgs .img1 .img-button a, .l-wrapper .imgs .img1 .img-button a, .d-wrapper .imgs .img1 .img-button a, .b-wrapper .imgs .img2 .img-button a, .l-wrapper .imgs .img2 .img-button a, .d-wrapper .imgs .img2 .img-button a, .b-wrapper .imgs .img3 .img-button a, .l-wrapper .imgs .img3 .img-button a, .d-wrapper .imgs .img3 .img-button a, .b-wrapper .imgs .img4 .img-button a, .l-wrapper .imgs .img4 .img-button a, .d-wrapper .imgs .img4 .img-button a, .b-wrapper .imgs .img5 .img-button a, .l-wrapper .imgs .img5 .img-button a, .d-wrapper .imgs .img5 .img-button a, .b-wrapper .imgs .img6 .img-button a, .l-wrapper .imgs .img6 .img-button a, .d-wrapper .imgs .img6 .img-button a, .b-wrapper .imgs .img7 .img-button a, .l-wrapper .imgs .img7 .img-button a, .d-wrapper .imgs .img7 .img-button a, .b-wrapper .imgs .img8 .img-button a, .l-wrapper .imgs .img8 .img-button a, .d-wrapper .imgs .img8 .img-button a, .b-wrapper .imgs .img9 .img-button a, .l-wrapper .imgs .img9 .img-button a, .d-wrapper .imgs .img9 .img-button a {
+      text-decoration: none;
+      color: #fefefe; }
 
 html {
   height: 100%; }

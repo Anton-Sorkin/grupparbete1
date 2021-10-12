@@ -41,6 +41,7 @@
   background: $black;
   box-shadow: 0px 4px 20px #2b2b2b;
   border-radius: 15px;
+  border: none;
   cursor: pointer;
   font-style: normal;
   font-weight: normal;
@@ -99,12 +100,17 @@
   height: 100%;
   position: relative;
   .img-button {
+    border: none;
     width: 80px;
     height: 50px;
     @extend .button-basic;
     position: absolute;
     top: 220px;
     left: 190px;
+    a {
+      text-decoration: none;
+      color: $white;
+    }
   }
 }
 
