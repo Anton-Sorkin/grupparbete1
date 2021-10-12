@@ -75,6 +75,15 @@ body {
   z-index: -1;
   font-family: "PT Mono", monospace;
   margin: 0; }
+  @media (min-width: 768px) {
+    .greenbackground {
+      background-color: #677662;
+      width: 100vw;
+      height: 80vh;
+      border-radius: 0px 150px 150px 0px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; } }
 
 .cart-container {
   height: 100vh;
@@ -88,7 +97,7 @@ body {
 
 .cart-title {
   width: 100%;
-  height: 30%; }
+  height: 40%; }
   .cart-title .items {
     background: #fefefe;
     display: flex;
@@ -100,6 +109,9 @@ body {
     border-top-left-radius: 100px;
     border-bottom-right-radius: 100px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.6) inset; }
+    @media (min-width: 992px) {
+      .cart-title .items {
+        flex-direction: row; } }
     .cart-title .items section {
       background-color: #bb9c6f80;
       width: 80%;
@@ -108,15 +120,24 @@ body {
       border-radius: 10px;
       display: flex;
       flex-direction: row;
-      align-items: center; }
+      align-items: center;
+      font-size: 16px; }
       .cart-title .items section .text {
         display: flex;
         flex-direction: column; }
+        @media (min-width: 992px) {
+          .cart-title .items section .text {
+            justify-content: center;
+            align-self: center; } }
 
 .cart-pic {
   height: 100px;
   border-radius: 10%;
   margin-right: 10px; }
+  @media (min-width: 992px) {
+    .cart-pic {
+      height: 200px;
+      margin-right: 3px; } }
 
 .tocheckout {
   width: 100%;
@@ -141,6 +162,9 @@ body {
   justify-content: space-around;
   gap: 1.5rem;
   flex-direction: column; }
+  @media (min-width: 768px) {
+    .checkout-wrapper {
+      align-items: center; } }
 
 .checkout-title {
   display: flex;
@@ -160,12 +184,21 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: center; }
+  @media (min-width: 768px) {
+    .bs-container {
+      width: 50%;
+      align-items: center; }
+      .bs-container form {
+        width: 60%; }
+        .bs-container form .form-check {
+          display: flex;
+          justify-content: flex-end; } }
 
 #request {
   resize: none; }
 
 .btn-confirm a {
-  color: #fff;
+  color: #fefefe;
   text-decoration: none; }
 
 .hero-wrapper {
