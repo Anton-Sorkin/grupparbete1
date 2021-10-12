@@ -9,7 +9,7 @@
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
-  line-height: 30px;
+  line-height: 25px;
   color: #fefefe;
   display: flex;
   align-items: center;
@@ -251,7 +251,7 @@ body {
     align-items: center;
     text-align: center; }
     .hero-wrapper .hero-title p {
-      color: #eec68a; }
+      color: #bb9c6f; }
   .hero-wrapper .row {
     position: relative; }
 
