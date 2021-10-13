@@ -11,6 +11,7 @@ html {
 }
 
 body {
+  height: 100%;
   font-family: "PT Mono", monospace;
   background-color: $light-green;
   margin: 0px;
@@ -22,21 +23,9 @@ body {
   background-color: $dark-green;
   height: 100%;
   width: 150px;
-  border-top-right-radius: 100px;
-  border-bottom-right-radius: 100px;
+  border-radius: 0 100px 100px 0;
   position: absolute;
   z-index: -1;
-  font-family: "PT Mono", monospace;
-  margin: 0;
-  @include tablet {
-    background-color: $dark-green;
-    width: 100vw;
-    height: 80vh;
-    border-radius: 0px 150px 150px 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
 }
 //END OF ALL STYLING----------------------------
 
@@ -182,7 +171,6 @@ body {
 //HERO SECTION --------------------------------------------------
 .hero-wrapper {
   position: relative;
-  height: 110vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -190,21 +178,27 @@ body {
   background-color: $white;
   box-shadow: inset 0px 4px 40px rgba(128, 145, 122, 0.75);
   border-radius: 75px;
+  padding: 50px;
   .hero-title {
-    height: 200px;
     width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    margin-bottom: 30px;
     p {
       color: $dark-brown;
     }
   }
   .row {
     position: relative;
+
+    .col-11 {
+      position: relative;
+    }
   }
 }
+
 .carousel-inner {
   border-radius: 15px;
   display: flex;
@@ -212,9 +206,19 @@ body {
 .row {
   .hero-check {
     @extend .button-basic;
-    position: relative;
-    bottom: 20px;
-    left: 25vw;
+    position: absolute;
+    bottom: -20px;
+    right: 0px;
+  }
+  @include tablet {
+    .hero-check {
+      right: 60px;
+    }
+  }
+  @include desktop {
+    .hero-check {
+      right: 160px;
+    }
   }
 }
 //SLUT PÅ HERO SECTION --------------------------------------------------
@@ -294,12 +298,14 @@ body {
   background-color: #000;
 }
 
+// START NAVBAR
+
 .nav-wrapper {
-	.navbar-brand {
-		color: #000;
-		font-size: 14px;
-		flex-grow: 1;
-	}
+  .navbar-brand {
+    color: #000;
+    font-size: 14px;
+    flex-grow: 1;
+  }
 
   .brand-img {
     width: 50px;
@@ -309,67 +315,66 @@ body {
 }
 
 .d-flex {
-	justify-content: space-around;
-	align-items: center;
-	flex-wrap: nowrap;
-	gap: 50px;
-	margin-bottom: 40px;
-	position: relative;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 30px;
+  margin-bottom: 40px;
+  position: relative;
 
-	.cart-btn, .cart-btn-desktop {
-		a {
-			color: #fff;
-		}
-	}
-	
-	.cart-btn-desktop {
-		display: none;
-		visibility: hidden;
-	}
+  .cart-btn,
+  .cart-btn-desktop {
+    a {
+      color: #fff;
+    }
+  }
 
-	.navbar-desktop {
-		display: none;
-		visibility: hidden;
-		list-style-type: none;
+  .cart-btn-desktop {
+    display: none;
+    visibility: hidden;
+  }
 
-		a {
-			display: block;
-			text-decoration: none;
-			color: $black;
-		}
+  .navbar-desktop {
+    display: none;
+    visibility: hidden;
+    list-style-type: none;
 
-		a:hover {
-			text-decoration: underline;
-		}
+    a {
+      display: block;
+      text-decoration: none;
+      color: $black;
+    }
 
-		.dropdown-desktop {
-			position: relative;
+    a:hover {
+      text-decoration: underline;
+    }
 
+    .dropdown-desktop {
+      position: relative;
 
-			.desktop-items {
-				width: 200px;
-				position: absolute;
-				display: none;
-				background: rgba(255, 255, 255, 0.8);
-				text-align: center;
-			}
+      .desktop-items {
+        width: 200px;
+        position: absolute;
+        display: none;
+        background: rgba(255, 255, 255, 0.8);
+        text-align: center;
+      }
 
-			.desktop-menu {
-				border: none;
-				outline: none;
-				background-color: inherit;
+      .desktop-menu {
+        border: none;
+        outline: none;
+        background-color: inherit;
+      }
 
-			}
+      .desktop-menu:hover {
+        text-decoration: underline;
+      }
+    }
 
-			.desktop-menu:hover {
-				text-decoration: underline;
-			}
-		}
-
-		.dropdown-desktop:hover .desktop-items {
-			display: block;
-		}
-	}
+    .dropdown-desktop:hover .desktop-items {
+      display: block;
+    }
+  }
 
   .dropdown {
     background: rgba(255, 255, 255, 0.8);
@@ -392,12 +397,12 @@ body {
     }
   }
 
-	.hamburger-btn {
-		background-color: #000;
-		border-radius: 4px;
-		width: 42px;
-		height: 38px;
-		margin-right: 20px;
+  .hamburger-btn {
+    background-color: #000;
+    border-radius: 4px;
+    width: 42px;
+    height: 38px;
+    margin-right: 20px;
 
     .hamburger {
       display: flex;
@@ -443,91 +448,97 @@ body {
     transform: scale(0);
   }
 
-	#toggle:checked ~ .dropdown {
-		visibility: visible;
-		display: block;
-		position: absolute;
-		width: 100%;
-		left: 0px;
-		right: 0px;
-	}
+  #toggle:checked ~ .dropdown {
+    visibility: visible;
+    display: block;
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    right: 0px;
+  }
 
-	@include desktop {
+  @include desktop {
+    .navbar-brand {
+      flex-grow: 0;
+    }
 
-		.navbar-brand {
-			flex-grow: 0;
-		}
-	
-		.hamburger-btn, .cart-btn {
-			display: none;
-			visibility: hidden;
-		}
+    .hamburger-btn,
+    .cart-btn {
+      display: none;
+      visibility: hidden;
+    }
 
-		.cart-btn-desktop {
-			display: block;
-			visibility: visible;
-			margin-right: 40px;
-		}
-		
-		.navbar-desktop {
-			width: 70%;
-			visibility: visible;
-			display: flex;
-			justify-content: space-evenly;
+    .cart-btn-desktop {
+      display: block;
+      visibility: visible;
+      margin-right: 40px;
+    }
 
-		}
-
-	}
-	
+    .navbar-desktop {
+      width: 70%;
+      visibility: visible;
+      display: flex;
+      justify-content: space-evenly;
+    }
+  }
 }
 @include desktop {
+  .d-flex {
+    justify-content: flex-start;
+    z-index: 5;
+  }
 
-	.d-flex {
-		justify-content: flex-start;
-		z-index: 5;
-	}
-
-	ul {
-		margin-bottom: 0;
-		padding-left: 0;
-	}
+  ul {
+    margin-bottom: 0;
+    padding-left: 0;
+  }
 }
 
+// SLUT PÅ NAVBAR
+
+// START PÅ FILTER-KNAPP
+
 .filter-box {
-	position: fixed;
-	display: inline-block;
-	left: 10px;
-	top: 140px;
-	z-index: 5;
+  position: fixed;
+  display: inline-block;
+  left: 10px;
+  top: 140px;
+  z-index: 5;
 
-	.filter-btn {
-		text-decoration: underline;
-		cursor: pointer;
-	}
+  ul {
+    margin-bottom: 0;
+    padding-left: 0;
+  }
 
+  .filter-btn {
+    text-decoration: underline;
+    cursor: pointer;
+  }
 
-	.filter-content {
-		position: absolute;
-		list-style-type: none;
-		display: none;
-		visibility: hidden;
-		left: 15px;
+  .filter-content {
+    position: absolute;
+    list-style-type: none;
+    display: none;
+    visibility: hidden;
 
-		a {
-			text-decoration: none;
-			color: $black;
-		}
-	}
+    a {
+      text-decoration: none;
+      color: $black;
+    }
+  }
 }
 
 #filter-toggle {
-	display: none;
+  display: none;
 }
 
 #filter-toggle:checked ~ .filter-content {
-	display: block;
-	visibility: visible;
+  display: block;
+  visibility: visible;
 }
+
+// SLUT PÅ FILTER-KNAPP
+
 .carousel-inner {
   border-radius: 15px;
 }
@@ -548,6 +559,15 @@ body {
   justify-content: center;
   color: $white;
   font-size: 24px;
+
+  @include desktop {
+    width: 100%;
+    height: 15vh;
+    font-size: 40px;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding-left: 50px;
+  }
 }
 .b-wrapper,
 .l-wrapper,
