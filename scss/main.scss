@@ -636,6 +636,7 @@ body {
   justify-content: center;
   color: $white;
   font-size: 24px;
+  padding: 30px;
 
   @include desktop {
     width: 100%;
@@ -643,7 +644,7 @@ body {
     font-size: 40px;
     justify-content: flex-start;
     align-items: flex-end;
-    padding-left: 50px;
+    padding-left: 135px;
   }
 }
 .b-wrapper,
@@ -653,7 +654,6 @@ body {
 }
 //---PRODUKT DELEN--------------------------------------------------------------------
 .wrapper {
-  height: 1500px;
   width: 100%;
   background: #ffffff;
   box-shadow: inset 0px 4px 40px rgba(128, 145, 122, 0.75);
@@ -661,6 +661,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 50px;
+  padding: 20px;
   .item {
     height: 500px;
     width: 90%;
@@ -751,8 +753,12 @@ body {
   }
 
   @include tablet {
-    height: 85vh;
-    flex-direction: row;
+    flex-flow: row wrap;
+    gap: 0;
+    row-gap: 30px;
+    .item {
+      width: 50%;
+    }
     .title {
       min-width: 200px;
     }
@@ -761,8 +767,8 @@ body {
     }
   }
   @include desktop {
-    height: 70vh;
     flex-direction: row;
+    gap: 0;
     .title {
       min-width: 230px;
     }

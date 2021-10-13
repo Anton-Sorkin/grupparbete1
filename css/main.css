@@ -537,7 +537,8 @@ body {
   display: flex;
   justify-content: center;
   color: #fefefe;
-  font-size: 24px; }
+  font-size: 24px;
+  padding: 30px; }
   @media (min-width: 992px) {
     #b-start,
     #l-start,
@@ -547,7 +548,7 @@ body {
       font-size: 40px;
       justify-content: flex-start;
       align-items: flex-end;
-      padding-left: 50px; } }
+      padding-left: 135px; } }
 
 .b-wrapper,
 .l-wrapper,
@@ -555,14 +556,15 @@ body {
   background-color: #fefefe; }
 
 .wrapper {
-  height: 1500px;
   width: 100%;
   background: #ffffff;
   box-shadow: inset 0px 4px 40px rgba(128, 145, 122, 0.75);
   border-radius: 150px;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  gap: 50px;
+  padding: 20px; }
   .wrapper .item {
     height: 500px;
     width: 90%;
@@ -638,16 +640,19 @@ body {
       padding: 20px 0px 0px 10px; }
   @media (min-width: 768px) {
     .wrapper {
-      height: 85vh;
-      flex-direction: row; }
+      flex-flow: row wrap;
+      gap: 0;
+      row-gap: 30px; }
+      .wrapper .item {
+        width: 50%; }
       .wrapper .title {
         min-width: 200px; }
       .wrapper .desc {
         min-width: 230px; } }
   @media (min-width: 992px) {
     .wrapper {
-      height: 70vh;
-      flex-direction: row; }
+      flex-direction: row;
+      gap: 0; }
       .wrapper .title {
         min-width: 230px; }
       .wrapper .desc {
