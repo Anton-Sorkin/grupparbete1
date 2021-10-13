@@ -104,7 +104,12 @@ body {
   font-size: 15pt;
   scroll-behavior: smooth; }
 
-.greenbackground {
+@media (min-width: 768px) {
+  .greenbackground {
+    display: flex;
+    justify-content: center; } }
+
+.greenbackground .green {
   background-color: #677662;
   height: 100%;
   width: 150px;
@@ -114,57 +119,81 @@ body {
   z-index: -1;
   margin: 0; }
   @media (min-width: 768px) {
-    .greenbackground {
-      background-color: #677662;
-      width: 100vw;
-      height: 80vh;
-      border-radius: 0px 150px 150px 0px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center; } }
+    .greenbackground .green {
+      width: 75%;
+      height: 82%;
+      margin-top: 40px;
+      border-radius: 100px 0px 100px 0px; } }
+  @media (min-width: 992px) {
+    .greenbackground .green {
+      width: 70%;
+      height: 90%; } }
 
 .cart-container {
   height: 100vh;
   width: 100vw; }
   .cart-container .cart-header {
     color: #fefefe;
+    font-size: 20px;
     display: flex;
     flex-direction: column;
     align-items: center; }
   .cart-container .cart-title {
     width: 100%;
     height: 40%; }
-    .cart-container .cart-title .items {
-      background: #fefefe;
+    @media (min-width: 768px) {
+      .cart-container .cart-title {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px; } }
+  .cart-container .items {
+    width: 100%;
+    background: #fefefe;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding: 50px 70px;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6) inset; }
+    @media (min-width: 768px) {
+      .cart-container .items {
+        width: max-content; } }
+    @media (min-width: 992px) {
+      .cart-container .items {
+        width: 50%; } }
+    .cart-container .items .tocheckout {
       display: flex;
       flex-direction: column;
+      align-items: center;
       justify-content: space-between;
-      align-items: center;
-      gap: 30px;
-      padding: 50px 70px;
-      border-top-left-radius: 100px;
-      border-bottom-right-radius: 100px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.6) inset; }
-      @media (min-width: 992px) {
-        .cart-container .cart-title .items {
-          flex-direction: row; } }
-    .cart-container .cart-title section {
-      background-color: #bb9c6f80;
-      width: 80%;
-      min-width: 270px;
-      max-width: 400px;
-      border-radius: 10px;
+      gap: 10px; }
+      @media (min-width: 768px) {
+        .cart-container .items .tocheckout {
+          flex-direction: row;
+          gap: 0px; } }
+  .cart-container section {
+    background-color: #bb9c6f80;
+    width: 80%;
+    min-width: 270px;
+    max-width: 400px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 16px; }
+    .cart-container section .text {
       display: flex;
-      flex-direction: row;
-      align-items: center;
-      font-size: 16px; }
-      .cart-container .cart-title section .text {
-        display: flex;
-        flex-direction: column; }
-        @media (min-width: 992px) {
-          .cart-container .cart-title section .text {
-            justify-content: center;
-            align-self: center; } }
+      flex-direction: column; }
+      @media (min-width: 992px) {
+        .cart-container section .text {
+          justify-content: center;
+          align-self: center; } }
 
 .cart-pic {
   height: 100px;
@@ -172,26 +201,35 @@ body {
   margin-right: 10px; }
   @media (min-width: 992px) {
     .cart-pic {
-      height: 200px;
+      height: 120px;
       margin-right: 3px; } }
 
-.tocheckout {
-  width: 100%;
-  height: 80%;
-  background: #fefefe;
-  margin: 50px 0px;
-  border-top-left-radius: 100px;
-  border-bottom-right-radius: 100px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6) inset;
-  font-size: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly; }
+.btn-payment {
+  width: 80%; }
+  .btn-payment a {
+    color: #fefefe;
+    text-decoration: none; }
 
-.btn-payment a {
-  color: #fefefe;
-  text-decoration: none; }
+@media (min-width: 768px) {
+  .greensidediv {
+    display: flex;
+    justify-content: center; } }
+
+.greensidediv .green-div {
+  background-color: #677662;
+  height: 100%;
+  width: 150px;
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+  position: absolute;
+  z-index: -1;
+  margin: 0; }
+  @media (min-width: 768px) {
+    .greensidediv .green-div {
+      width: 70%;
+      height: 85%;
+      margin-top: 40px;
+      border-radius: 100px 0px 100px 0px; } }
 
 .checkout-wrapper {
   display: flex;
@@ -208,6 +246,9 @@ body {
   color: #fefefe;
   margin-top: 10px;
   font-size: 30px; }
+  @media (min-width: 768px) {
+    .checkout-title {
+      margin-top: 0px; } }
 
 .bs-container {
   background: #fefefe;
@@ -223,7 +264,8 @@ body {
   @media (min-width: 768px) {
     .bs-container {
       width: 50%;
-      align-items: center; }
+      align-items: center;
+      margin-top: 30px; }
       .bs-container form {
         width: 60%; }
         .bs-container form .form-check {
@@ -300,7 +342,7 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 1rem;
+      font-size: 0.9rem;
       margin-left: 10px; }
       .tack-container .dark-green .thank-order .order {
         color: #bb9c6f; }
@@ -318,9 +360,6 @@ body {
       @media (min-width: 768px) {
         .tack-container .dark-green .light-container {
           width: 70%; } }
-      @media (min-width: 992px) {
-        .tack-container .dark-green .light-container {
-          width: 70%; } }
       .tack-container .dark-green .light-container .thank-wrapper {
         font-family: "PT Mono", monospace;
         font-style: normal;
@@ -333,11 +372,11 @@ body {
           color: #bb9c6f; }
         @media (min-width: 768px) {
           .tack-container .dark-green .light-container .thank-wrapper {
-            font-size: 1rem;
+            font-size: 0.9rem;
             line-height: 40px; } }
         @media (min-width: 992px) {
           .tack-container .dark-green .light-container .thank-wrapper {
-            font-size: 1.5rem;
+            font-size: 1.1rem;
             line-height: 50px; } }
     .tack-container .dark-green .thank-receipt {
       width: 70%;
