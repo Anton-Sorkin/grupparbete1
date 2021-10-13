@@ -12,15 +12,15 @@
 
 //media query for tablet
 @mixin tablet {
-  @media (min-width: 768px) {
-    @content;
-  }
+	@media (min-width: 768px) {
+		@content;
+	}
 }
 //media query for desktop
 @mixin desktop {
-  @media (min-width: 992px) {
-    @content;
-  }
+	@media (min-width: 992px) {
+		@content;
+	}
 }
 
 // how to use it
@@ -35,83 +35,58 @@
 
 //för att skapa svarta knappen
 .button-basic {
-  //self styiling
-  width: 150px; //kan behöva ändras
-  height: 50px; //kan behöva ändras
-  background: $black;
-  box-shadow: 0px 4px 20px #2b2b2b;
-  border-radius: 15px;
-  cursor: pointer;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 25px;
-  color: $white;
-  //child behavior
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+	//self styiling
+	width: 150px; //kan behöva ändras
+	height: 50px; //kan behöva ändras
+	background: $black;
+	box-shadow: 0px 4px 20px #2b2b2b;
+	border-radius: 15px;
+	border: none;
+	cursor: pointer;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 20px;
+	color: $white;
+	//child behavior
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
 }
 
 //för att skapa en title för ett item
 .item-title {
-  width: 200px; //kan behöva ändras
-  min-width: 100px;
-  height: 50px; //kan behöva ändras
-  background: $dark-brown;
-  box-shadow: 0px 4px 80px rgba(187, 156, 111, 0.5);
-  border-radius: 15px;
-
-  font-size: 18px;
-  line-height: 25px;
-  color: $black;
-  //child behavior
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+	width: 200px; //kan behöva ändras
+	min-width: 100px;
+	height: 50px; //kan behöva ändras
+	background: $dark-brown;
+	box-shadow: 0px 4px 80px rgba(187, 156, 111, 0.5);
+	border-radius: 15px;
+	font-size: 18px;
+	line-height: 20px;
+	color: $black;
+	//child behavior
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
 }
 
 //för att skapa en description till ett item
 .item-desc {
-  width: 80%; //kan behöva ändras
-  height: 100px; //kan behöva ändras
-  padding: 10px;
-  background: $light-brown;
-  box-shadow: 0px 4px 80px rgba(187, 156, 111, 0.5);
-  border-radius: 30px;
-  font-size: 16px;
-  line-height: 25px;
-  color: $black;
-  //child behavior
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+	width: 80%; //kan behöva ändras
+	height: 100px; //kan behöva ändras
+	padding: 10px;
+	background: $light-brown;
+	box-shadow: 0px 4px 80px rgba(187, 156, 111, 0.5);
+	border-radius: 30px;
+	font-size: 16px;
+	line-height: 20px;
+	color: $black;
+	//child behavior
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
 }
-.pictures {
-  background-size: contain;
-  background-repeat: no-repeat;
-  filter: drop-shadow(4px 10px 10px rgba(0, 0, 0, 0.25));
-  border-radius: 30px;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  .img-button {
-    width: 80px;
-    height: 50px;
-    @extend .button-basic;
-    position: absolute;
-    top: 220px;
-    left: 190px;
-  }
-}
-
-// how to use it
-
-// selector {                              (aka det ni vill ska ändras)
-//   @extend extend-name;      (extend .button-basic)
-//   här skriver ni scss som overwrite .button-basic
-// }
-//-------------------------------------------------------------------------------------------
