@@ -296,6 +296,26 @@ body {
   .row .hero-check {
     right: 160px; } }
 
+.greenside-main {
+  position: absolute;
+  z-index: -1;
+  margin: 0; }
+  .greenside-main .green-main {
+    background-color: #677662;
+    min-height: 50vh;
+    max-height: 50vh;
+    width: 190px;
+    border-radius: 0px 100px 100px 0px;
+    position: absolute;
+    z-index: -1;
+    margin: 0; }
+    @media (min-width: 768px) {
+      .greenside-main .green-main {
+        min-height: 100vh;
+        max-height: 100vh;
+        width: 200px;
+        border-radius: 0px 100px 0px 0px; } }
+
 .tack-container {
   background-color: #80917a;
   height: 100vh;
@@ -576,9 +596,9 @@ body {
 
 .wrapper {
   width: 100%;
-  background: #ffffff;
+  background: #fefefe;
   box-shadow: inset 0px 4px 40px rgba(128, 145, 122, 0.75);
-  border-radius: 150px;
+  border-radius: 75px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -587,19 +607,40 @@ body {
   .wrapper .item {
     height: 500px;
     width: 90%;
+    font-size: 0.7rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: center; }
+    align-items: center;
+    text-align: center; }
+    @media (min-width: 768px) {
+      .wrapper .item {
+        font-size: 0.9rem; } }
     .wrapper .item .title {
       height: 50px;
-      width: 40%;
+      min-width: 40%;
+      max-width: 70%;
       background: #bb9c6f;
       box-shadow: 0px 4px 80px rgba(187, 156, 111, 0.5);
       border-radius: 15px;
       display: flex;
       align-items: center;
-      justify-content: center; }
+      justify-content: center;
+      text-align: center; }
+      @media (min-width: 768px) {
+        .wrapper .item .title {
+          min-width: 40%;
+          max-width: 50%; } }
+      @media (min-width: 992px) {
+        .wrapper .item .title {
+          min-width: 200px;
+          max-width: 200px; } }
+      .wrapper .item .title h1 {
+        font-size: 0.9rem; }
+        @media (min-width: 768px) {
+          .wrapper .item .title h1 {
+            font-size: 1.1rem;
+            margin-bottom: 0; } }
     .wrapper .item .picture {
       height: 250px;
       width: 250px;
@@ -621,21 +662,21 @@ body {
       .wrapper .item .picture .picture1 {
         background-image: url(../components/Acaiskål.jpg); }
       .wrapper .item .picture .picture2 {
-        background-image: url(../components/Avokado-macka.jpg); }
+        background-image: url(../components/Gröt.jpg); }
       .wrapper .item .picture .picture3 {
-        background-image: url(../components/Acaiskål.jpg); }
+        background-image: url(../components/Mackor.jpg); }
       .wrapper .item .picture .picture4 {
-        background-image: url(../components/Acaiskål.jpg); }
+        background-image: url(../components/Rispappersrullar.jpg); }
       .wrapper .item .picture .picture5 {
-        background-image: url(../components/Acaiskål.jpg); }
+        background-image: url(../components/Falafel.jpg); }
       .wrapper .item .picture .picture6 {
-        background-image: url(../components/Acaiskål.jpg); }
+        background-image: url(../components/Sötpotatissallad.jpg); }
       .wrapper .item .picture .picture7 {
-        background-image: url(../components/Acaiskål.jpg); }
+        background-image: url(../components/Sushi.jpg); }
       .wrapper .item .picture .picture8 {
-        background-image: url(../components/Acaiskål.jpg); }
+        background-image: url(../components/Pumpasoppa.jpg); }
       .wrapper .item .picture .picture9 {
-        background-image: url(../components/Acaiskål.jpg); }
+        background-image: url(../components/Glasnudlar.jpg); }
       .wrapper .item .picture .p-button {
         height: 70px;
         width: 100px;
@@ -645,11 +686,12 @@ body {
         background: #242424;
         box-shadow: 0px 4px 20px #2b2b2b;
         border-radius: 30px;
-        color: white;
+        color: #fefefe;
         border: none; }
     .wrapper .item .desc {
       height: 100px;
-      width: 60%;
+      min-width: 60%;
+      max-width: 70%;
       background: rgba(187, 156, 111, 0.5);
       box-shadow: 0px 4px 80px rgba(187, 156, 111, 0.5);
       border-radius: 30px;
@@ -657,6 +699,14 @@ body {
       align-items: center;
       justify-content: center;
       padding: 20px 0px 0px 10px; }
+      @media (min-width: 768px) {
+        .wrapper .item .desc {
+          min-width: 60%;
+          max-width: 70%; } }
+      @media (min-width: 992px) {
+        .wrapper .item .desc {
+          min-width: 300px;
+          max-width: 300px; } }
   @media (min-width: 768px) {
     .wrapper {
       flex-flow: row wrap;
