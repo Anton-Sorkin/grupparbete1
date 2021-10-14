@@ -647,6 +647,10 @@ body {
         border-radius: 30px;
         color: white;
         border: none; }
+      .wrapper .item .picture .p-button:hover span {
+        display: none; }
+      .wrapper .item .picture .p-button:hover::after {
+        content: "Add to cart!"; }
     .wrapper .item .desc {
       height: 100px;
       width: 60%;
