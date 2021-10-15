@@ -1,8 +1,8 @@
 @import "mixins";
 //ALL STYLING----------------------------
-html {
-  height: 100%;
-}
+// html {
+//   height: 100%;
+// }
 
 * {
   box-sizing: border-box;
@@ -292,6 +292,7 @@ body {
     position: absolute;
     bottom: -20px;
     right: 0px;
+    z-index: 5;
   }
   @include tablet {
     .hero-check {
@@ -591,39 +592,36 @@ body {
 }
 
 @include desktop {
-  .navbar-brand {
-    flex-grow: 0;
-  }
-
-  .hamburger-btn,
-  .cart-btn {
-    display: none;
-    visibility: hidden;
-  }
-
-  .cart-btn-desktop {
-    display: block;
-    visibility: visible;
-    margin-right: 40px;
-  }
-
-  .navbar-desktop {
-    width: 70%;
-    visibility: visible;
-    display: flex;
-    justify-content: space-evenly;
-  }
-}
-
-@include desktop {
   .d-flex {
     justify-content: flex-start;
     z-index: 5;
-  }
+    .navbar-brand {
+      flex-grow: 0;
+    }
 
-  ul {
-    margin-bottom: 0;
-    padding-left: 0;
+    .hamburger-btn,
+    .cart-btn {
+      display: none;
+      visibility: hidden;
+    }
+
+    .cart-btn-desktop {
+      display: block;
+      visibility: visible;
+      margin-right: 40px;
+    }
+
+    .navbar-desktop {
+      width: 70%;
+      visibility: visible;
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    ul {
+      margin-bottom: 0;
+      padding-left: 0;
+    }
   }
 }
 
