@@ -766,6 +766,12 @@ body {
         color: $white;
         border: none;
       }
+      .p-button:hover span {
+        display: none;
+      }
+      .p-button:hover::after {
+        content: "Add to cart!";
+      }
     }
     .desc {
       @extend .item-desc;
