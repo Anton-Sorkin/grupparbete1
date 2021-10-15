@@ -600,6 +600,9 @@ body {
       display: flex;
       align-items: center;
       justify-content: center; }
+      .wrapper .item .title h1 {
+        font-size: 1.5rem;
+        margin-bottom: 0; }
     .wrapper .item .picture {
       height: 250px;
       width: 250px;
@@ -631,7 +634,7 @@ body {
       .wrapper .item .picture .picture6 {
         background-image: url(../components/Acaiskål.jpg); }
       .wrapper .item .picture .picture7 {
-        background-image: url(../components/Acaiskål.jpg); }
+        background-image: url(../components/Sushi.jpg); }
       .wrapper .item .picture .picture8 {
         background-image: url(../components/Acaiskål.jpg); }
       .wrapper .item .picture .picture9 {
