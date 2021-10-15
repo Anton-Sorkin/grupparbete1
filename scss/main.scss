@@ -323,6 +323,10 @@ body {
       width: 200px;
       border-radius: 0px 100px 0px 0px;
     }
+    @include desktop {
+      min-height: 50vh;
+      max-height: 50vh;
+    }
   }
 }
 //SLUT PÅ HERO SECTION --------------------------------------------------
