@@ -57,36 +57,27 @@
 
 //för att skapa en title för ett item
 .item-title {
-	width: 200px; //kan behöva ändras
-	min-width: 100px;
-	height: 50px; //kan behöva ändras
+	height: 50px;
+	width: 40%;
 	background: $dark-brown;
 	box-shadow: 0px 4px 80px rgba(187, 156, 111, 0.5);
 	border-radius: 15px;
-	font-size: 18px;
-	line-height: 20px;
-	color: $black;
-	//child behavior
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	text-align: center;
 }
 
 //för att skapa en description till ett item
 .item-desc {
-	width: 80%; //kan behöva ändras
-	height: 100px; //kan behöva ändras
-	padding: 10px;
-	background: $light-brown;
+	height: 100px;
+	width: 60%;
+	background: rgba(187, 156, 111, 0.5);
 	box-shadow: 0px 4px 80px rgba(187, 156, 111, 0.5);
 	border-radius: 30px;
-	font-size: 16px;
-	line-height: 20px;
-	color: $black;
-	//child behavior
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	text-align: center;
+	padding: 20px 0px 0px 10px;
 }
