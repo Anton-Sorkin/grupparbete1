@@ -600,6 +600,8 @@ body {
     flex-direction: column;
     justify-content: space-around;
     align-items: center; }
+    .wrapper .item .title {
+      font-size: 14px; }
     .wrapper .item .picture {
       height: 250px;
       width: 250px;
