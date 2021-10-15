@@ -419,7 +419,7 @@ body {
 
 .nav-wrapper {
   .navbar-brand {
-    color: #000;
+    color: $black;
     font-size: 14px;
     flex-grow: 1;
   }
@@ -442,7 +442,7 @@ body {
   .cart-btn,
   .cart-btn-desktop {
     a {
-      color: #fff;
+      color: $white;
     }
   }
 
@@ -509,13 +509,13 @@ body {
     a {
       padding: 1px;
       display: block;
-      color: #000;
+      color: $black;
       text-decoration: none;
     }
   }
 
   .hamburger-btn {
-    background-color: #000;
+    background-color: $black;
     border-radius: 4px;
     width: 42px;
     height: 38px;
@@ -534,7 +534,7 @@ body {
       .bar3 {
         width: 30px;
         height: 4px;
-        background-color: #fff;
+        background-color: $white;
         margin: 2px 0;
         border-radius: 10px;
 
@@ -664,6 +664,11 @@ body {
 }
 .modal-body {
   color: $dark-brown;
+  @include desktop {
+    font-size: 1.1rem;
+    line-height: 30px;
+    margin-left: 10px;
+  }
 }
 .btn-modal {
   @extend .button-basic;
