@@ -17,35 +17,28 @@
   justify-content: center;
   text-align: center; }
 
-.item-title, .box-title {
-  width: 200px;
-  min-width: 100px;
+.item-title, .box-title, .wrapper .item .title {
   height: 50px;
+  width: 40%;
   background: #bb9c6f;
   box-shadow: 0px 4px 80px rgba(187, 156, 111, 0.5);
   border-radius: 15px;
-  font-size: 18px;
-  line-height: 20px;
-  color: #2b2b2b;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-align: center; }
+  justify-content: center; }
 
-.item-desc, .box-desc {
-  width: 80%;
+.item-desc, .box-desc, .wrapper .item .desc {
   height: 100px;
-  padding: 10px;
-  background: #bb9c6f80;
+  width: 60%;
+  background: rgba(187, 156, 111, 0.5);
   box-shadow: 0px 4px 80px rgba(187, 156, 111, 0.5);
   border-radius: 30px;
-  font-size: 16px;
-  line-height: 20px;
-  color: #2b2b2b;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center; }
+  padding: 20px 0px 0px 10px; }
 
 html {
   height: 100%; }
@@ -75,6 +68,8 @@ body {
   max-height: 665px;
   width: 150px;
   border-radius: 0px 100px 100px 0px;
+  -moz-border-radius: 0px 100px 100px 0px;
+  -webkit-border-radius: 0px 100px 100px 0px;
   position: absolute;
   z-index: -1;
   margin: 0; }
@@ -148,6 +143,8 @@ body {
     min-width: 270px;
     max-width: 400px;
     border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -186,6 +183,8 @@ body {
   max-height: 680px;
   width: 150px;
   border-radius: 0px 100px 100px 0px;
+  -moz-border-radius: 0px 100px 100px 0px;
+  -webkit-border-radius: 0px 100px 100px 0px;
   position: absolute;
   z-index: -1;
   margin: 0; }
@@ -264,6 +263,8 @@ body {
   background-color: #fefefe;
   box-shadow: inset 0px 4px 40px rgba(128, 145, 122, 0.75);
   border-radius: 75px;
+  -moz-border-radius: 75px;
+  -webkit-border-radius: 75px;
   padding: 50px; }
   .hero-wrapper .hero-title {
     width: 90%;
@@ -281,6 +282,8 @@ body {
 
 .carousel-inner {
   border-radius: 15px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
   display: flex; }
 
 .row .hero-check {
@@ -309,6 +312,8 @@ body {
     width: 100vw;
     height: 80vh;
     border-radius: 0px 150px 150px 0px;
+    -moz-border-radius: 0px 150px 150px 0px;
+    -webkit-border-radius: 0px 150px 150px 0px;
     display: flex;
     flex-direction: column;
     justify-content: center; }
@@ -378,11 +383,11 @@ body {
         max-width: 200px; }
 
 .btn-dark {
-  border-color: #000;
-  background-color: #000; }
+  border-color: #2b2b2b;
+  background-color: #2b2b2b; }
 
 .nav-wrapper .navbar-brand {
-  color: #000;
+  color: #2b2b2b;
   font-size: 14px;
   flex-grow: 1; }
 
@@ -400,7 +405,7 @@ body {
   position: relative; }
   .d-flex .cart-btn a,
   .d-flex .cart-btn-desktop a {
-    color: #fff; }
+    color: #fefefe; }
   .d-flex .cart-btn-desktop {
     display: none;
     visibility: hidden; }
@@ -443,10 +448,10 @@ body {
     .d-flex .dropdown a {
       padding: 1px;
       display: block;
-      color: #000;
+      color: #2b2b2b;
       text-decoration: none; }
   .d-flex .hamburger-btn {
-    background-color: #000;
+    background-color: #2b2b2b;
     border-radius: 4px;
     width: 42px;
     height: 38px;
@@ -463,7 +468,7 @@ body {
       .d-flex .hamburger-btn .hamburger .bar3 {
         width: 30px;
         height: 4px;
-        background-color: #fff;
+        background-color: #fefefe;
         margin: 2px 0;
         border-radius: 10px;
         -webkit-transition: all 0.2s ease-in-out;
@@ -542,7 +547,9 @@ body {
   visibility: visible; }
 
 .carousel-inner {
-  border-radius: 15px; }
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px; }
 
 .modal-title {
   color: #2b2b2b; }
@@ -576,9 +583,11 @@ body {
 
 .wrapper {
   width: 100%;
-  background: #ffffff;
+  background: #fefefe;
   box-shadow: inset 0px 4px 40px rgba(128, 145, 122, 0.75);
   border-radius: 150px;
+  -moz-border-radius: 150px;
+  -webkit-border-radius: 150px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -591,6 +600,7 @@ body {
     flex-direction: column;
     justify-content: space-around;
     align-items: center; }
+<<<<<<< HEAD
     .wrapper .item .title {
       height: 50px;
       width: 40%;
@@ -603,6 +613,8 @@ body {
       .wrapper .item .title h1 {
         font-size: 1.5rem;
         margin-bottom: 0; }
+=======
+>>>>>>> 08009b394905ba1c063ad1c7d46fa5cf83792a4e
     .wrapper .item .picture {
       height: 250px;
       width: 250px;
@@ -645,25 +657,11 @@ body {
         position: absolute;
         left: 180px;
         top: 200px;
-        background: #242424;
+        background: #2b2b2b;
         box-shadow: 0px 4px 20px #2b2b2b;
         border-radius: 30px;
-        color: white;
+        color: #fefefe;
         border: none; }
-      .wrapper .item .picture .p-button:hover span {
-        display: none; }
-      .wrapper .item .picture .p-button:hover::after {
-        content: "Add to cart!"; }
-    .wrapper .item .desc {
-      height: 100px;
-      width: 60%;
-      background: rgba(187, 156, 111, 0.5);
-      box-shadow: 0px 4px 80px rgba(187, 156, 111, 0.5);
-      border-radius: 30px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px 0px 0px 10px; }
   @media (min-width: 768px) {
     .wrapper {
       flex-flow: row wrap;
