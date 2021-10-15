@@ -651,6 +651,8 @@ body {
         display: none; }
       .wrapper .item .picture .p-button:hover::after {
         content: "Add to cart!"; }
+    .wrapper .item .desc p {
+      font-size: 1rem; }
   @media (min-width: 768px) {
     .wrapper {
       flex-flow: row wrap;

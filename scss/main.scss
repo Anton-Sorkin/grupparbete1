@@ -775,6 +775,10 @@ body {
     }
     .desc {
       @extend .item-desc;
+
+      p {
+        font-size: 1rem;
+      }
     }
   }
 
